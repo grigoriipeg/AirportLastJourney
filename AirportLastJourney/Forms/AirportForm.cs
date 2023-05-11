@@ -36,14 +36,37 @@ namespace AirportLastJourney
 
         private void AddTool_Click(object sender, EventArgs e)
         {
-            var infoForm = new FlightsForm();
-
-            if (infoForm.ShowDialog(this) == DialogResult.OK)
+            using (ApplicationContext db = new ApplicationContext())
             {
-                using (ApplicationContext db = new ApplicationContext())
+                var infoForm = new FlightsForm();
+
+                if (infoForm.ShowDialog(this) == DialogResult.OK)
                 {
+
                     db.Flights.Add(infoForm.Flights);
                     db.SaveChanges();
+                    flights.Clear();
+                    flights.AddRange(ReadDb());
+                    BinSource.ResetBindings(false);
+                    FlightsDGV.Update();
+                    InfoStatCal();
+                }
+            }
+        }
+
+
+        private void DeleteTool_Click(object sender, EventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var flight = (Flights)FlightsDGV.Rows[FlightsDGV.SelectedRows[0].Index].DataBoundItem;
+                if (MessageBox.Show($"Вы действительно хотите удалить рейс {flight.id_flight}, прилетающий {flight.eta:G}?",
+                    "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    db.Flights.Remove(flight);
+                    db.SaveChanges();
+
                     flights.Clear();
                     flights.AddRange(ReadDb());
                     BinSource.ResetBindings(false);
@@ -53,26 +76,13 @@ namespace AirportLastJourney
         }
 
 
-        private void DeleteTool_Click(object sender, EventArgs e)
-        {
-            var id = (Flights)FlightsDGV.Rows[FlightsDGV.SelectedRows[0].Index].DataBoundItem;
-            if (MessageBox.Show($"Вы действительно хотите удалить рейс {id.id_flight}, прилетающий {id.eta:G}?",
-                "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                flights.Remove(id);
-                BinSource.ResetBindings(false);
-                InfoStatCal();
-            }
-        }
-
-
         private void ChangeTool_Click(object sender, EventArgs e)
         {
+            // TODO работа с бд
             var id = (Flights)FlightsDGV.Rows[FlightsDGV.SelectedRows[0].Index].DataBoundItem;
             var infoForm = new FlightsForm(id);
             if (infoForm.ShowDialog(this) == DialogResult.OK)
             {
-                id.id_flight = infoForm.Flights.id_flight;
                 id.type = infoForm.Flights.type;
                 id.eta = infoForm.Flights.eta;
                 id.countPas = infoForm.Flights.countPas;

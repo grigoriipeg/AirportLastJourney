@@ -1,8 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace AirportLastJourney.Models
 {
     public class Flights
     {
+        [Key]
         public int id_flight { get; set; }
         public Types type { get; set; }
         public DateTime eta { get; set; }

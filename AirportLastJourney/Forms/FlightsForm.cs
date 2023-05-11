@@ -15,13 +15,10 @@ namespace AirportLastJourney
             using (ApplicationContext db = new ApplicationContext())
             {
                 var last = db.Flights.OrderBy(x => x.id_flight).LastOrDefault();
-                int id = 1;
                 if (last != null)
                 {
-                    id += last.id_flight;
+                    numericFlight.Text = (last.id_flight + 1).ToString();
                 }
-                
-
 
                 flights = new Flights
                 {
@@ -44,7 +41,7 @@ namespace AirportLastJourney
         public FlightsForm(Flights source):this()
         {
             this.Text = "Редактирование рейса";
-            numericFlight.Value = source.id_flight;
+            numericFlight.Text = source.id_flight.ToString();
             comboType.SelectedItem = source.type;
             dateTimeETA.Value = source.eta;
             numericCountPas.Value = source.countPas;
@@ -107,10 +104,6 @@ namespace AirportLastJourney
             }
         }
 
-        private void numericFlight_ValueChanged(object sender, EventArgs e)
-        {
-            flights.id_flight = (int)numericFlight.Value;
-        }
 
         private void dateTimeETA_ValueChanged(object sender, EventArgs e)
         {

@@ -28,585 +28,621 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AirportForm));
-            mainMenuMS = new MenuStrip();
-            File = new ToolStripMenuItem();
-            открытьToolStripMenuItem = new ToolStripMenuItem();
-            сохранитьToolStripMenuItem = new ToolStripMenuItem();
-            экспортToolStripMenuItem = new ToolStripMenuItem();
-            Correction = new ToolStripMenuItem();
-            AddMenu = new ToolStripMenuItem();
-            ChangeMenu = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            DeliteMenu = new ToolStripMenuItem();
-            About = new ToolStripMenuItem();
-            выходToolStripMenuItem = new ToolStripMenuItem();
-            toolsTS = new ToolStrip();
-            AddTool = new ToolStripButton();
-            ChangeTool = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            DeliteTool = new ToolStripButton();
-            FlightsDGV = new DataGridView();
-            infoSS = new StatusStrip();
-            CountFlightsTSSL = new ToolStripStatusLabel();
-            CountPasTSSL = new ToolStripStatusLabel();
-            CountCrewTSSL = new ToolStripStatusLabel();
-            SumTSSL = new ToolStripStatusLabel();
-            groupBox1 = new GroupBox();
-            rb9 = new RadioButton();
-            rb8 = new RadioButton();
-            rb7 = new RadioButton();
-            rb6 = new RadioButton();
-            rb5 = new RadioButton();
-            sortBtn = new Button();
-            rb4 = new RadioButton();
-            rb2 = new RadioButton();
-            rb3 = new RadioButton();
-            rb1 = new RadioButton();
-            label3 = new Label();
-            filter_txt = new TextBox();
-            more_radio = new RadioButton();
-            less_radio = new RadioButton();
-            expBtn = new Button();
-            openFileDialog1 = new OpenFileDialog();
-            numFlightColumn = new DataGridViewTextBoxColumn();
-            typeColumn = new DataGridViewTextBoxColumn();
-            etaColumn = new DataGridViewTextBoxColumn();
-            countPasColumn = new DataGridViewTextBoxColumn();
-            price4PasColumn = new DataGridViewTextBoxColumn();
-            countCrewColumn = new DataGridViewTextBoxColumn();
-            price4CrewColumn = new DataGridViewTextBoxColumn();
-            procDopColumn = new DataGridViewTextBoxColumn();
-            sumColumn = new DataGridViewTextBoxColumn();
-            mainMenuMS.SuspendLayout();
-            toolsTS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)FlightsDGV).BeginInit();
-            infoSS.SuspendLayout();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.mainMenuMS = new System.Windows.Forms.MenuStrip();
+            this.File = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Correction = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChangeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeliteMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.About = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsTS = new System.Windows.Forms.ToolStrip();
+            this.AddTool = new System.Windows.Forms.ToolStripButton();
+            this.ChangeTool = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeliteTool = new System.Windows.Forms.ToolStripButton();
+            this.FlightsDGV = new System.Windows.Forms.DataGridView();
+            this.numFlightColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countPasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price4PasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countCrewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price4CrewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.procDopColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infoSS = new System.Windows.Forms.StatusStrip();
+            this.CountFlightsTSSL = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CountPasTSSL = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CountCrewTSSL = new System.Windows.Forms.ToolStripStatusLabel();
+            this.SumTSSL = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb9 = new System.Windows.Forms.RadioButton();
+            this.rb8 = new System.Windows.Forms.RadioButton();
+            this.rb7 = new System.Windows.Forms.RadioButton();
+            this.rb6 = new System.Windows.Forms.RadioButton();
+            this.rb5 = new System.Windows.Forms.RadioButton();
+            this.sortBtn = new System.Windows.Forms.Button();
+            this.rb4 = new System.Windows.Forms.RadioButton();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb3 = new System.Windows.Forms.RadioButton();
+            this.rb1 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.filter_txt = new System.Windows.Forms.TextBox();
+            this.more_radio = new System.Windows.Forms.RadioButton();
+            this.less_radio = new System.Windows.Forms.RadioButton();
+            this.expBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.mainMenuMS.SuspendLayout();
+            this.toolsTS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlightsDGV)).BeginInit();
+            this.infoSS.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // mainMenuMS
             // 
-            mainMenuMS.Items.AddRange(new ToolStripItem[] { File, Correction, About, выходToolStripMenuItem });
-            mainMenuMS.Location = new Point(0, 0);
-            mainMenuMS.Name = "mainMenuMS";
-            mainMenuMS.Padding = new Padding(7, 2, 0, 2);
-            mainMenuMS.Size = new Size(1606, 24);
-            mainMenuMS.TabIndex = 0;
-            mainMenuMS.Text = "menuStrip1";
+            this.mainMenuMS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mainMenuMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.File,
+            this.Correction,
+            this.About,
+            this.выходToolStripMenuItem});
+            this.mainMenuMS.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuMS.Name = "mainMenuMS";
+            this.mainMenuMS.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.mainMenuMS.Size = new System.Drawing.Size(1835, 30);
+            this.mainMenuMS.TabIndex = 0;
+            this.mainMenuMS.Text = "menuStrip1";
             // 
             // File
             // 
-            File.DropDownItems.AddRange(new ToolStripItem[] { открытьToolStripMenuItem, сохранитьToolStripMenuItem, экспортToolStripMenuItem });
-            File.Name = "File";
-            File.Size = new Size(48, 20);
-            File.Text = "Файл";
+            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.открытьToolStripMenuItem,
+            this.сохранитьToolStripMenuItem,
+            this.экспортToolStripMenuItem});
+            this.File.Name = "File";
+            this.File.Size = new System.Drawing.Size(59, 24);
+            this.File.Text = "Файл";
             // 
             // открытьToolStripMenuItem
             // 
-            открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            открытьToolStripMenuItem.Size = new Size(133, 22);
-            открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьToolStripMenuItem
             // 
-            сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            сохранитьToolStripMenuItem.Size = new Size(133, 22);
-            сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
             // экспортToolStripMenuItem
             // 
-            экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            экспортToolStripMenuItem.Size = new Size(133, 22);
-            экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
             // 
             // Correction
             // 
-            Correction.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, ChangeMenu, toolStripSeparator1, DeliteMenu });
-            Correction.Name = "Correction";
-            Correction.Size = new Size(59, 20);
-            Correction.Text = "Правка";
+            this.Correction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddMenu,
+            this.ChangeMenu,
+            this.toolStripSeparator1,
+            this.DeliteMenu});
+            this.Correction.Name = "Correction";
+            this.Correction.Size = new System.Drawing.Size(74, 24);
+            this.Correction.Text = "Правка";
             // 
             // AddMenu
             // 
-            AddMenu.Name = "AddMenu";
-            AddMenu.Size = new Size(128, 22);
-            AddMenu.Text = "Добавить";
-            AddMenu.Click += AddTool_Click;
+            this.AddMenu.Name = "AddMenu";
+            this.AddMenu.Size = new System.Drawing.Size(161, 26);
+            this.AddMenu.Text = "Добавить";
             // 
             // ChangeMenu
             // 
-            ChangeMenu.Enabled = false;
-            ChangeMenu.Name = "ChangeMenu";
-            ChangeMenu.Size = new Size(128, 22);
-            ChangeMenu.Text = "Изменить";
-            ChangeMenu.Click += ChangeTool_Click;
+            this.ChangeMenu.Enabled = false;
+            this.ChangeMenu.Name = "ChangeMenu";
+            this.ChangeMenu.Size = new System.Drawing.Size(161, 26);
+            this.ChangeMenu.Text = "Изменить";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(125, 6);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
             // 
             // DeliteMenu
             // 
-            DeliteMenu.Enabled = false;
-            DeliteMenu.Name = "DeliteMenu";
-            DeliteMenu.Size = new Size(128, 22);
-            DeliteMenu.Text = "Удалить";
-            DeliteMenu.Click += DeleteTool_Click;
+            this.DeliteMenu.Enabled = false;
+            this.DeliteMenu.Name = "DeliteMenu";
+            this.DeliteMenu.Size = new System.Drawing.Size(161, 26);
+            this.DeliteMenu.Text = "Удалить";
             // 
             // About
             // 
-            About.Name = "About";
-            About.Size = new Size(94, 20);
-            About.Text = "О программе";
-            About.Click += About_Click;
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(118, 24);
+            this.About.Text = "О программе";
             // 
             // выходToolStripMenuItem
             // 
-            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(54, 20);
-            выходToolStripMenuItem.Text = "Выход";
-            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.выходToolStripMenuItem.Text = "Выход";
             // 
             // toolsTS
             // 
-            toolsTS.Items.AddRange(new ToolStripItem[] { AddTool, ChangeTool, toolStripSeparator2, DeliteTool });
-            toolsTS.Location = new Point(0, 24);
-            toolsTS.Name = "toolsTS";
-            toolsTS.Size = new Size(1606, 25);
-            toolsTS.TabIndex = 1;
-            toolsTS.Text = "toolStrip1";
+            this.toolsTS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolsTS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddTool,
+            this.ChangeTool,
+            this.toolStripSeparator2,
+            this.DeliteTool});
+            this.toolsTS.Location = new System.Drawing.Point(0, 30);
+            this.toolsTS.Name = "toolsTS";
+            this.toolsTS.Size = new System.Drawing.Size(1835, 27);
+            this.toolsTS.TabIndex = 1;
+            this.toolsTS.Text = "toolStrip1";
             // 
             // AddTool
             // 
-            AddTool.ImageTransparentColor = Color.Magenta;
-            AddTool.Name = "AddTool";
-            AddTool.Size = new Size(63, 22);
-            AddTool.Text = "Добавить";
-            AddTool.Click += AddTool_Click;
+            this.AddTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddTool.Name = "AddTool";
+            this.AddTool.Size = new System.Drawing.Size(80, 24);
+            this.AddTool.Text = "Добавить";
             // 
             // ChangeTool
             // 
-            ChangeTool.Enabled = false;
-            ChangeTool.ImageTransparentColor = Color.Magenta;
-            ChangeTool.Name = "ChangeTool";
-            ChangeTool.Size = new Size(65, 22);
-            ChangeTool.Text = "Изменить";
-            ChangeTool.Click += ChangeTool_Click;
+            this.ChangeTool.Enabled = false;
+            this.ChangeTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ChangeTool.Name = "ChangeTool";
+            this.ChangeTool.Size = new System.Drawing.Size(82, 24);
+            this.ChangeTool.Text = "Изменить";
+            this.ChangeTool.Click += new System.EventHandler(this.ChangeTool_Click);
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // DeliteTool
             // 
-            DeliteTool.Enabled = false;
-            DeliteTool.ImageTransparentColor = Color.Magenta;
-            DeliteTool.Name = "DeliteTool";
-            DeliteTool.Size = new Size(55, 22);
-            DeliteTool.Text = "Удалить";
-            DeliteTool.Click += DeleteTool_Click;
+            this.DeliteTool.Enabled = false;
+            this.DeliteTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeliteTool.Name = "DeliteTool";
+            this.DeliteTool.Size = new System.Drawing.Size(69, 24);
+            this.DeliteTool.Text = "Удалить";
             // 
             // FlightsDGV
             // 
-            FlightsDGV.AllowUserToAddRows = false;
-            FlightsDGV.AllowUserToDeleteRows = false;
-            FlightsDGV.AllowUserToResizeColumns = false;
-            FlightsDGV.AllowUserToResizeRows = false;
-            FlightsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            FlightsDGV.Columns.AddRange(new DataGridViewColumn[] { numFlightColumn, typeColumn, etaColumn, countPasColumn, price4PasColumn, countCrewColumn, price4CrewColumn, procDopColumn, sumColumn });
-            FlightsDGV.Location = new Point(0, 57);
-            FlightsDGV.Margin = new Padding(4, 3, 4, 3);
-            FlightsDGV.MultiSelect = false;
-            FlightsDGV.Name = "FlightsDGV";
-            FlightsDGV.ReadOnly = true;
+            this.FlightsDGV.AllowUserToAddRows = false;
+            this.FlightsDGV.AllowUserToDeleteRows = false;
+            this.FlightsDGV.AllowUserToResizeColumns = false;
+            this.FlightsDGV.AllowUserToResizeRows = false;
+            this.FlightsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FlightsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numFlightColumn,
+            this.typeColumn,
+            this.etaColumn,
+            this.countPasColumn,
+            this.price4PasColumn,
+            this.countCrewColumn,
+            this.price4CrewColumn,
+            this.procDopColumn,
+            this.sumColumn});
+            this.FlightsDGV.Location = new System.Drawing.Point(0, 76);
+            this.FlightsDGV.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.FlightsDGV.MultiSelect = false;
+            this.FlightsDGV.Name = "FlightsDGV";
+            this.FlightsDGV.ReadOnly = true;
+            this.FlightsDGV.RowHeadersWidth = 51;
             dataGridViewCellStyle9.NullValue = "fgn";
-            FlightsDGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            FlightsDGV.Size = new Size(1027, 526);
-            FlightsDGV.TabIndex = 2;
-            FlightsDGV.SelectionChanged += FlightsDGV_SelectionChanged;
-            // 
-            // infoSS
-            // 
-            infoSS.Items.AddRange(new ToolStripItem[] { CountFlightsTSSL, CountPasTSSL, CountCrewTSSL, SumTSSL });
-            infoSS.Location = new Point(0, 586);
-            infoSS.Name = "infoSS";
-            infoSS.Padding = new Padding(1, 0, 16, 0);
-            infoSS.Size = new Size(1606, 22);
-            infoSS.TabIndex = 3;
-            infoSS.Text = "statusStrip1";
-            // 
-            // CountFlightsTSSL
-            // 
-            CountFlightsTSSL.Name = "CountFlightsTSSL";
-            CountFlightsTSSL.Size = new Size(97, 17);
-            CountFlightsTSSL.Text = "Кол-во рейсов 0";
-            // 
-            // CountPasTSSL
-            // 
-            CountPasTSSL.Name = "CountPasTSSL";
-            CountPasTSSL.Size = new Size(117, 17);
-            CountPasTSSL.Text = "Всего пассажиров 0";
-            // 
-            // CountCrewTSSL
-            // 
-            CountCrewTSSL.Name = "CountCrewTSSL";
-            CountCrewTSSL.Size = new Size(97, 17);
-            CountCrewTSSL.Text = "Всего экипажа 0";
-            // 
-            // SumTSSL
-            // 
-            SumTSSL.Name = "SumTSSL";
-            SumTSSL.Size = new Size(105, 17);
-            SumTSSL.Text = "Общая выручка 0";
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(rb9);
-            groupBox1.Controls.Add(rb8);
-            groupBox1.Controls.Add(rb7);
-            groupBox1.Controls.Add(rb6);
-            groupBox1.Controls.Add(rb5);
-            groupBox1.Controls.Add(sortBtn);
-            groupBox1.Controls.Add(rb4);
-            groupBox1.Controls.Add(rb2);
-            groupBox1.Controls.Add(rb3);
-            groupBox1.Controls.Add(rb1);
-            groupBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(1058, 28);
-            groupBox1.Margin = new Padding(4, 3, 4, 3);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(534, 362);
-            groupBox1.TabIndex = 50;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Сортировать по:";
-            // 
-            // rb9
-            // 
-            rb9.AutoSize = true;
-            rb9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb9.Location = new Point(320, 246);
-            rb9.Margin = new Padding(4, 3, 4, 3);
-            rb9.Name = "rb9";
-            rb9.Size = new Size(109, 28);
-            rb9.TabIndex = 53;
-            rb9.TabStop = true;
-            rb9.Text = "выручке";
-            rb9.UseVisualStyleBackColor = true;
-            // 
-            // rb8
-            // 
-            rb8.AutoSize = true;
-            rb8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb8.Location = new Point(271, 145);
-            rb8.Margin = new Padding(4, 3, 4, 3);
-            rb8.Name = "rb8";
-            rb8.Size = new Size(220, 28);
-            rb8.TabIndex = 52;
-            rb8.TabStop = true;
-            rb8.Text = "проценту надбавки";
-            rb8.UseVisualStyleBackColor = true;
-            // 
-            // rb7
-            // 
-            rb7.AutoSize = true;
-            rb7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb7.Location = new Point(271, 45);
-            rb7.Margin = new Padding(4, 3, 4, 3);
-            rb7.Name = "rb7";
-            rb7.Size = new Size(190, 28);
-            rb7.TabIndex = 51;
-            rb7.TabStop = true;
-            rb7.Text = "сбору за экипаж";
-            rb7.UseVisualStyleBackColor = true;
-            // 
-            // rb6
-            // 
-            rb6.AutoSize = true;
-            rb6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb6.Location = new Point(30, 313);
-            rb6.Margin = new Padding(4, 3, 4, 3);
-            rb6.Name = "rb6";
-            rb6.Size = new Size(208, 28);
-            rb6.TabIndex = 50;
-            rb6.TabStop = true;
-            rb6.Text = "по кол-ву экипажа";
-            rb6.UseVisualStyleBackColor = true;
-            // 
-            // rb5
-            // 
-            rb5.AutoSize = true;
-            rb5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb5.Location = new Point(30, 257);
-            rb5.Margin = new Padding(4, 3, 4, 3);
-            rb5.Name = "rb5";
-            rb5.Size = new Size(225, 28);
-            rb5.TabIndex = 49;
-            rb5.TabStop = true;
-            rb5.Text = "сбору за пассажира";
-            rb5.UseVisualStyleBackColor = true;
-            // 
-            // sortBtn
-            // 
-            sortBtn.BackColor = SystemColors.ControlLight;
-            sortBtn.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            sortBtn.Location = new Point(294, 297);
-            sortBtn.Margin = new Padding(4, 3, 4, 3);
-            sortBtn.Name = "sortBtn";
-            sortBtn.Size = new Size(240, 66);
-            sortBtn.TabIndex = 44;
-            sortBtn.Text = "Сортировка";
-            sortBtn.UseVisualStyleBackColor = false;
-            // 
-            // rb4
-            // 
-            rb4.AutoSize = true;
-            rb4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb4.Location = new Point(30, 204);
-            rb4.Margin = new Padding(4, 3, 4, 3);
-            rb4.Name = "rb4";
-            rb4.Size = new Size(245, 28);
-            rb4.TabIndex = 48;
-            rb4.TabStop = true;
-            rb4.Text = "по кол-ву пассажиров";
-            rb4.UseVisualStyleBackColor = true;
-            // 
-            // rb2
-            // 
-            rb2.AutoSize = true;
-            rb2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb2.Location = new Point(30, 91);
-            rb2.Margin = new Padding(4, 3, 4, 3);
-            rb2.Name = "rb2";
-            rb2.Size = new Size(216, 28);
-            rb2.TabIndex = 47;
-            rb2.TabStop = true;
-            rb2.Text = "времени прибытия";
-            rb2.UseVisualStyleBackColor = true;
-            // 
-            // rb3
-            // 
-            rb3.AutoSize = true;
-            rb3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb3.Location = new Point(30, 145);
-            rb3.Margin = new Padding(4, 3, 4, 3);
-            rb3.Name = "rb3";
-            rb3.Size = new Size(172, 28);
-            rb3.TabIndex = 46;
-            rb3.TabStop = true;
-            rb3.Text = "типу самолёта";
-            rb3.UseVisualStyleBackColor = true;
-            // 
-            // rb1
-            // 
-            rb1.AutoSize = true;
-            rb1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            rb1.Location = new Point(30, 45);
-            rb1.Margin = new Padding(4, 3, 4, 3);
-            rb1.Name = "rb1";
-            rb1.Size = new Size(134, 28);
-            rb1.TabIndex = 45;
-            rb1.TabStop = true;
-            rb1.Text = "коду учёта";
-            rb1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(1071, 434);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(169, 24);
-            label3.TabIndex = 51;
-            label3.Text = "Фильтр по цене";
-            // 
-            // filter_txt
-            // 
-            filter_txt.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            filter_txt.Location = new Point(1288, 430);
-            filter_txt.Margin = new Padding(4, 3, 4, 3);
-            filter_txt.Name = "filter_txt";
-            filter_txt.Size = new Size(115, 29);
-            filter_txt.TabIndex = 52;
-            // 
-            // more_radio
-            // 
-            more_radio.AutoSize = true;
-            more_radio.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            more_radio.Location = new Point(1441, 407);
-            more_radio.Margin = new Padding(4, 3, 4, 3);
-            more_radio.Name = "more_radio";
-            more_radio.Size = new Size(98, 28);
-            more_radio.TabIndex = 53;
-            more_radio.TabStop = true;
-            more_radio.Text = "Больше";
-            more_radio.UseVisualStyleBackColor = true;
-            // 
-            // less_radio
-            // 
-            less_radio.AutoSize = true;
-            less_radio.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            less_radio.Location = new Point(1441, 447);
-            less_radio.Margin = new Padding(4, 3, 4, 3);
-            less_radio.Name = "less_radio";
-            less_radio.Size = new Size(102, 28);
-            less_radio.TabIndex = 54;
-            less_radio.TabStop = true;
-            less_radio.Text = "Меньше";
-            less_radio.UseVisualStyleBackColor = true;
-            // 
-            // expBtn
-            // 
-            expBtn.BackColor = SystemColors.ControlLight;
-            expBtn.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            expBtn.Location = new Point(1188, 497);
-            expBtn.Margin = new Padding(4, 3, 4, 3);
-            expBtn.Name = "expBtn";
-            expBtn.Size = new Size(252, 72);
-            expBtn.TabIndex = 55;
-            expBtn.Text = "Экспорт";
-            expBtn.UseVisualStyleBackColor = false;
-            // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "openFileDialog1";
+            this.FlightsDGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.FlightsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FlightsDGV.Size = new System.Drawing.Size(1174, 701);
+            this.FlightsDGV.TabIndex = 2;
+            this.FlightsDGV.SelectionChanged += new System.EventHandler(this.FlightsDGV_SelectionChanged);
             // 
             // numFlightColumn
             // 
-            numFlightColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            numFlightColumn.DataPropertyName = "id_flight";
+            this.numFlightColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numFlightColumn.DataPropertyName = "id_flight";
             dataGridViewCellStyle1.Format = "####";
             dataGridViewCellStyle1.NullValue = null;
-            numFlightColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            numFlightColumn.HeaderText = "Номер рейса";
-            numFlightColumn.Name = "numFlightColumn";
-            numFlightColumn.ReadOnly = true;
+            this.numFlightColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.numFlightColumn.HeaderText = "Номер рейса";
+            this.numFlightColumn.MinimumWidth = 6;
+            this.numFlightColumn.Name = "numFlightColumn";
+            this.numFlightColumn.ReadOnly = true;
             // 
             // typeColumn
             // 
-            typeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            typeColumn.DataPropertyName = "Type";
-            typeColumn.HeaderText = "Тип самолёта";
-            typeColumn.Name = "typeColumn";
-            typeColumn.ReadOnly = true;
+            this.typeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeColumn.DataPropertyName = "Type";
+            this.typeColumn.HeaderText = "Тип самолёта";
+            this.typeColumn.MinimumWidth = 6;
+            this.typeColumn.Name = "typeColumn";
+            this.typeColumn.ReadOnly = true;
             // 
             // etaColumn
             // 
-            etaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            etaColumn.DataPropertyName = "ETA";
+            this.etaColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.etaColumn.DataPropertyName = "ETA";
             dataGridViewCellStyle2.Format = "g";
             dataGridViewCellStyle2.NullValue = null;
-            etaColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            etaColumn.HeaderText = "Время прибытия";
-            etaColumn.Name = "etaColumn";
-            etaColumn.ReadOnly = true;
+            this.etaColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.etaColumn.HeaderText = "Время прибытия";
+            this.etaColumn.MinimumWidth = 6;
+            this.etaColumn.Name = "etaColumn";
+            this.etaColumn.ReadOnly = true;
             // 
             // countPasColumn
             // 
-            countPasColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            countPasColumn.DataPropertyName = "CountPas";
+            this.countPasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.countPasColumn.DataPropertyName = "CountPas";
             dataGridViewCellStyle3.Format = "N0";
-            countPasColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            countPasColumn.HeaderText = "Кол-во пассажиров";
-            countPasColumn.Name = "countPasColumn";
-            countPasColumn.ReadOnly = true;
+            this.countPasColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.countPasColumn.HeaderText = "Кол-во пассажиров";
+            this.countPasColumn.MinimumWidth = 6;
+            this.countPasColumn.Name = "countPasColumn";
+            this.countPasColumn.ReadOnly = true;
             // 
             // price4PasColumn
             // 
-            price4PasColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            price4PasColumn.DataPropertyName = "PricePas";
+            this.price4PasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.price4PasColumn.DataPropertyName = "PricePas";
             dataGridViewCellStyle4.Format = "C2";
-            price4PasColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            price4PasColumn.HeaderText = "Сбор на пассажира";
-            price4PasColumn.Name = "price4PasColumn";
-            price4PasColumn.ReadOnly = true;
+            this.price4PasColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.price4PasColumn.HeaderText = "Сбор на пассажира";
+            this.price4PasColumn.MinimumWidth = 6;
+            this.price4PasColumn.Name = "price4PasColumn";
+            this.price4PasColumn.ReadOnly = true;
             // 
             // countCrewColumn
             // 
-            countCrewColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            countCrewColumn.DataPropertyName = "CountCrew";
+            this.countCrewColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.countCrewColumn.DataPropertyName = "CountCrew";
             dataGridViewCellStyle5.Format = "N0";
-            countCrewColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            countCrewColumn.HeaderText = "Кол-во экипажа";
-            countCrewColumn.Name = "countCrewColumn";
-            countCrewColumn.ReadOnly = true;
+            this.countCrewColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.countCrewColumn.HeaderText = "Кол-во экипажа";
+            this.countCrewColumn.MinimumWidth = 6;
+            this.countCrewColumn.Name = "countCrewColumn";
+            this.countCrewColumn.ReadOnly = true;
             // 
             // price4CrewColumn
             // 
-            price4CrewColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            price4CrewColumn.DataPropertyName = "PriceCrew";
+            this.price4CrewColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.price4CrewColumn.DataPropertyName = "PriceCrew";
             dataGridViewCellStyle6.Format = "C2";
             dataGridViewCellStyle6.NullValue = null;
-            price4CrewColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            price4CrewColumn.HeaderText = "Сбор на экипаж";
-            price4CrewColumn.Name = "price4CrewColumn";
-            price4CrewColumn.ReadOnly = true;
+            this.price4CrewColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.price4CrewColumn.HeaderText = "Сбор на экипаж";
+            this.price4CrewColumn.MinimumWidth = 6;
+            this.price4CrewColumn.Name = "price4CrewColumn";
+            this.price4CrewColumn.ReadOnly = true;
             // 
             // procDopColumn
             // 
-            procDopColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            procDopColumn.DataPropertyName = "ProcDop";
+            this.procDopColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.procDopColumn.DataPropertyName = "ProcDop";
             dataGridViewCellStyle7.Format = "N2";
-            procDopColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            procDopColumn.HeaderText = "Процент надбавки";
-            procDopColumn.Name = "procDopColumn";
-            procDopColumn.ReadOnly = true;
+            this.procDopColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.procDopColumn.HeaderText = "Процент надбавки";
+            this.procDopColumn.MinimumWidth = 6;
+            this.procDopColumn.Name = "procDopColumn";
+            this.procDopColumn.ReadOnly = true;
             // 
             // sumColumn
             // 
-            sumColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            sumColumn.DataPropertyName = "Sum";
+            this.sumColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sumColumn.DataPropertyName = "Sum";
             dataGridViewCellStyle8.Format = "C2";
-            sumColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            sumColumn.HeaderText = "Выручка";
-            sumColumn.Name = "sumColumn";
-            sumColumn.ReadOnly = true;
+            this.sumColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.sumColumn.HeaderText = "Выручка";
+            this.sumColumn.MinimumWidth = 6;
+            this.sumColumn.Name = "sumColumn";
+            this.sumColumn.ReadOnly = true;
+            // 
+            // infoSS
+            // 
+            this.infoSS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.infoSS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CountFlightsTSSL,
+            this.CountPasTSSL,
+            this.CountCrewTSSL,
+            this.SumTSSL});
+            this.infoSS.Location = new System.Drawing.Point(0, 785);
+            this.infoSS.Name = "infoSS";
+            this.infoSS.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.infoSS.Size = new System.Drawing.Size(1835, 26);
+            this.infoSS.TabIndex = 3;
+            this.infoSS.Text = "statusStrip1";
+            // 
+            // CountFlightsTSSL
+            // 
+            this.CountFlightsTSSL.Name = "CountFlightsTSSL";
+            this.CountFlightsTSSL.Size = new System.Drawing.Size(124, 20);
+            this.CountFlightsTSSL.Text = "Кол-во рейсов 0";
+            // 
+            // CountPasTSSL
+            // 
+            this.CountPasTSSL.Name = "CountPasTSSL";
+            this.CountPasTSSL.Size = new System.Drawing.Size(149, 20);
+            this.CountPasTSSL.Text = "Всего пассажиров 0";
+            // 
+            // CountCrewTSSL
+            // 
+            this.CountCrewTSSL.Name = "CountCrewTSSL";
+            this.CountCrewTSSL.Size = new System.Drawing.Size(123, 20);
+            this.CountCrewTSSL.Text = "Всего экипажа 0";
+            // 
+            // SumTSSL
+            // 
+            this.SumTSSL.Name = "SumTSSL";
+            this.SumTSSL.Size = new System.Drawing.Size(131, 20);
+            this.SumTSSL.Text = "Общая выручка 0";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rb9);
+            this.groupBox1.Controls.Add(this.rb8);
+            this.groupBox1.Controls.Add(this.rb7);
+            this.groupBox1.Controls.Add(this.rb6);
+            this.groupBox1.Controls.Add(this.rb5);
+            this.groupBox1.Controls.Add(this.sortBtn);
+            this.groupBox1.Controls.Add(this.rb4);
+            this.groupBox1.Controls.Add(this.rb2);
+            this.groupBox1.Controls.Add(this.rb3);
+            this.groupBox1.Controls.Add(this.rb1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(1209, 37);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Size = new System.Drawing.Size(610, 483);
+            this.groupBox1.TabIndex = 50;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Сортировать по:";
+            // 
+            // rb9
+            // 
+            this.rb9.AutoSize = true;
+            this.rb9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb9.Location = new System.Drawing.Point(366, 328);
+            this.rb9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb9.Name = "rb9";
+            this.rb9.Size = new System.Drawing.Size(136, 33);
+            this.rb9.TabIndex = 53;
+            this.rb9.TabStop = true;
+            this.rb9.Text = "выручке";
+            this.rb9.UseVisualStyleBackColor = true;
+            // 
+            // rb8
+            // 
+            this.rb8.AutoSize = true;
+            this.rb8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb8.Location = new System.Drawing.Point(310, 193);
+            this.rb8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb8.Name = "rb8";
+            this.rb8.Size = new System.Drawing.Size(276, 33);
+            this.rb8.TabIndex = 52;
+            this.rb8.TabStop = true;
+            this.rb8.Text = "проценту надбавки";
+            this.rb8.UseVisualStyleBackColor = true;
+            // 
+            // rb7
+            // 
+            this.rb7.AutoSize = true;
+            this.rb7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb7.Location = new System.Drawing.Point(310, 60);
+            this.rb7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb7.Name = "rb7";
+            this.rb7.Size = new System.Drawing.Size(238, 33);
+            this.rb7.TabIndex = 51;
+            this.rb7.TabStop = true;
+            this.rb7.Text = "сбору за экипаж";
+            this.rb7.UseVisualStyleBackColor = true;
+            // 
+            // rb6
+            // 
+            this.rb6.AutoSize = true;
+            this.rb6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb6.Location = new System.Drawing.Point(34, 417);
+            this.rb6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb6.Name = "rb6";
+            this.rb6.Size = new System.Drawing.Size(264, 33);
+            this.rb6.TabIndex = 50;
+            this.rb6.TabStop = true;
+            this.rb6.Text = "по кол-ву экипажа";
+            this.rb6.UseVisualStyleBackColor = true;
+            // 
+            // rb5
+            // 
+            this.rb5.AutoSize = true;
+            this.rb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb5.Location = new System.Drawing.Point(34, 343);
+            this.rb5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb5.Name = "rb5";
+            this.rb5.Size = new System.Drawing.Size(280, 33);
+            this.rb5.TabIndex = 49;
+            this.rb5.TabStop = true;
+            this.rb5.Text = "сбору за пассажира";
+            this.rb5.UseVisualStyleBackColor = true;
+            // 
+            // sortBtn
+            // 
+            this.sortBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.sortBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sortBtn.Location = new System.Drawing.Point(336, 396);
+            this.sortBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.sortBtn.Name = "sortBtn";
+            this.sortBtn.Size = new System.Drawing.Size(274, 88);
+            this.sortBtn.TabIndex = 44;
+            this.sortBtn.Text = "Сортировка";
+            this.sortBtn.UseVisualStyleBackColor = false;
+            // 
+            // rb4
+            // 
+            this.rb4.AutoSize = true;
+            this.rb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb4.Location = new System.Drawing.Point(34, 272);
+            this.rb4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb4.Name = "rb4";
+            this.rb4.Size = new System.Drawing.Size(307, 33);
+            this.rb4.TabIndex = 48;
+            this.rb4.TabStop = true;
+            this.rb4.Text = "по кол-ву пассажиров";
+            this.rb4.UseVisualStyleBackColor = true;
+            // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb2.Location = new System.Drawing.Point(34, 121);
+            this.rb2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(275, 33);
+            this.rb2.TabIndex = 47;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "времени прибытия";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb3
+            // 
+            this.rb3.AutoSize = true;
+            this.rb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb3.Location = new System.Drawing.Point(34, 193);
+            this.rb3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb3.Name = "rb3";
+            this.rb3.Size = new System.Drawing.Size(217, 33);
+            this.rb3.TabIndex = 46;
+            this.rb3.TabStop = true;
+            this.rb3.Text = "типу самолёта";
+            this.rb3.UseVisualStyleBackColor = true;
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rb1.Location = new System.Drawing.Point(34, 60);
+            this.rb1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(165, 33);
+            this.rb1.TabIndex = 45;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "коду учёта";
+            this.rb1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(1224, 579);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 29);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Фильтр по цене";
+            // 
+            // filter_txt
+            // 
+            this.filter_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filter_txt.Location = new System.Drawing.Point(1472, 573);
+            this.filter_txt.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.filter_txt.Name = "filter_txt";
+            this.filter_txt.Size = new System.Drawing.Size(131, 34);
+            this.filter_txt.TabIndex = 52;
+            // 
+            // more_radio
+            // 
+            this.more_radio.AutoSize = true;
+            this.more_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.more_radio.Location = new System.Drawing.Point(1647, 543);
+            this.more_radio.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.more_radio.Name = "more_radio";
+            this.more_radio.Size = new System.Drawing.Size(125, 33);
+            this.more_radio.TabIndex = 53;
+            this.more_radio.TabStop = true;
+            this.more_radio.Text = "Больше";
+            this.more_radio.UseVisualStyleBackColor = true;
+            // 
+            // less_radio
+            // 
+            this.less_radio.AutoSize = true;
+            this.less_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.less_radio.Location = new System.Drawing.Point(1647, 596);
+            this.less_radio.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.less_radio.Name = "less_radio";
+            this.less_radio.Size = new System.Drawing.Size(130, 33);
+            this.less_radio.TabIndex = 54;
+            this.less_radio.TabStop = true;
+            this.less_radio.Text = "Меньше";
+            this.less_radio.UseVisualStyleBackColor = true;
+            // 
+            // expBtn
+            // 
+            this.expBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.expBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.expBtn.Location = new System.Drawing.Point(1358, 663);
+            this.expBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.expBtn.Name = "expBtn";
+            this.expBtn.Size = new System.Drawing.Size(288, 96);
+            this.expBtn.TabIndex = 55;
+            this.expBtn.Text = "Экспорт";
+            this.expBtn.UseVisualStyleBackColor = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // AirportForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1606, 608);
-            Controls.Add(expBtn);
-            Controls.Add(label3);
-            Controls.Add(filter_txt);
-            Controls.Add(more_radio);
-            Controls.Add(less_radio);
-            Controls.Add(groupBox1);
-            Controls.Add(infoSS);
-            Controls.Add(FlightsDGV);
-            Controls.Add(toolsTS);
-            Controls.Add(mainMenuMS);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MainMenuStrip = mainMenuMS;
-            Margin = new Padding(4, 3, 4, 3);
-            MinimumSize = new Size(1047, 571);
-            Name = "AirportForm";
-            Text = "Аэропорт";
-            mainMenuMS.ResumeLayout(false);
-            mainMenuMS.PerformLayout();
-            toolsTS.ResumeLayout(false);
-            toolsTS.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)FlightsDGV).EndInit();
-            infoSS.ResumeLayout(false);
-            infoSS.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1835, 811);
+            this.Controls.Add(this.expBtn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.filter_txt);
+            this.Controls.Add(this.more_radio);
+            this.Controls.Add(this.less_radio);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.infoSS);
+            this.Controls.Add(this.FlightsDGV);
+            this.Controls.Add(this.toolsTS);
+            this.Controls.Add(this.mainMenuMS);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mainMenuMS;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MinimumSize = new System.Drawing.Size(1194, 746);
+            this.Name = "AirportForm";
+            this.Text = "Аэропорт";
+            this.mainMenuMS.ResumeLayout(false);
+            this.mainMenuMS.PerformLayout();
+            this.toolsTS.ResumeLayout(false);
+            this.toolsTS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlightsDGV)).EndInit();
+            this.infoSS.ResumeLayout(false);
+            this.infoSS.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
