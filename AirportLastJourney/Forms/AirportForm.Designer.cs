@@ -205,6 +205,7 @@
             this.AddTool.Name = "AddTool";
             this.AddTool.Size = new System.Drawing.Size(80, 24);
             this.AddTool.Text = "Добавить";
+            this.AddTool.Click += new System.EventHandler(this.AddTool_Click);
             // 
             // ChangeTool
             // 
@@ -227,6 +228,7 @@
             this.DeliteTool.Name = "DeliteTool";
             this.DeliteTool.Size = new System.Drawing.Size(69, 24);
             this.DeliteTool.Text = "Удалить";
+            this.DeliteTool.Click += new System.EventHandler(this.DeleteTool_Click);
             // 
             // FlightsDGV
             // 

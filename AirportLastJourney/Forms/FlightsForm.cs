@@ -5,7 +5,7 @@ namespace AirportLastJourney
 {
     public partial class FlightsForm : Form
     {
-        private readonly Flights flights;
+        private readonly Flights flight;
         public string text = "Боинг";
 
         public FlightsForm()
@@ -20,7 +20,7 @@ namespace AirportLastJourney
                     numericFlight.Text = (last.id_flight + 1).ToString();
                 }
 
-                flights = new Flights
+                flight = new Flights
                 {
                     type = Types.Boeing,
                     eta = DateTime.Now.AddDays(1),
@@ -31,7 +31,7 @@ namespace AirportLastJourney
                     procDop = (double)numericProcDop.Value,
                     sum = 7200
                 };
-                comboType.SelectedItem = flights.type;
+                comboType.SelectedItem = flight.type;
             }
 
             this.Text = "Добавление рейса";
@@ -51,7 +51,7 @@ namespace AirportLastJourney
             numericProcDop.Value = (decimal)source.procDop;
             textSum.Text = source.sum.ToString();
         }
-        public Flights Flights => flights;
+        public Flights Flight => flight;
 
         private void FillDirection()
         {
@@ -100,53 +100,53 @@ namespace AirportLastJourney
         {
             if(comboType.SelectedIndex >= 0)
             {
-                flights.type = (Types)comboType.SelectedItem;
+                flight.type = (Types)comboType.SelectedItem;
             }
         }
 
 
         private void dateTimeETA_ValueChanged(object sender, EventArgs e)
         {
-            flights.eta = dateTimeETA.Value;
+            flight.eta = dateTimeETA.Value;
         }
 
         private void numericCountPas_ValueChanged(object sender, EventArgs e)
         {
-            flights.countPas = (int)numericCountPas.Value;
-            textSum.Text = ((flights.countPas * flights.pricePas + flights.countCrew * flights.priceCrew) *
-                (1 + flights.procDop * 0.01)).ToString();
+            flight.countPas = (int)numericCountPas.Value;
+            textSum.Text = ((flight.countPas * flight.pricePas + flight.countCrew * flight.priceCrew) *
+                (1 + flight.procDop * 0.01)).ToString();
         }
 
         private void numericPricePas_ValueChanged(object sender, EventArgs e)
         {
-            flights.pricePas = (double)numericPricePas.Value;
-            textSum.Text = ((flights.countPas * flights.pricePas + flights.countCrew * flights.priceCrew) *
-                (1 + flights.procDop * 0.01)).ToString();
+            flight.pricePas = (double)numericPricePas.Value;
+            textSum.Text = ((flight.countPas * flight.pricePas + flight.countCrew * flight.priceCrew) *
+                (1 + flight.procDop * 0.01)).ToString();
         }
 
         private void numericCountCrew_ValueChanged(object sender, EventArgs e)
         {
-            flights.countCrew = (int)numericCountCrew.Value;
-            textSum.Text = ((flights.countPas * flights.pricePas + flights.countCrew * flights.priceCrew) *
-                (1 + flights.procDop * 0.01)).ToString();
+            flight.countCrew = (int)numericCountCrew.Value;
+            textSum.Text = ((flight.countPas * flight.pricePas + flight.countCrew * flight.priceCrew) *
+                (1 + flight.procDop * 0.01)).ToString();
         }
 
         private void numericPriceCrew_ValueChanged(object sender, EventArgs e)
         {
-            flights.priceCrew = (double)numericPriceCrew.Value;
-            textSum.Text = ((flights.countPas * flights.pricePas + flights.countCrew * flights.priceCrew) *
-                (1 + flights.procDop * 0.01)).ToString();
+            flight.priceCrew = (double)numericPriceCrew.Value;
+            textSum.Text = ((flight.countPas * flight.pricePas + flight.countCrew * flight.priceCrew) *
+                (1 + flight.procDop * 0.01)).ToString();
         }
         private void numericProcDop_ValueChanged(object sender, EventArgs e)
         {
-            flights.procDop = (int)numericProcDop.Value;
-            textSum.Text = ((flights.countPas * flights.pricePas + flights.countCrew * flights.priceCrew) *
-                (1 + flights.procDop * 0.01)).ToString();
+            flight.procDop = (int)numericProcDop.Value;
+            textSum.Text = ((flight.countPas * flight.pricePas + flight.countCrew * flight.priceCrew) *
+                (1 + flight.procDop * 0.01)).ToString();
         }
 
         private void textSum_TextChanged(object sender, EventArgs e)
         {
-            flights.sum = double.Parse(textSum.Text);
+            flight.sum = double.Parse(textSum.Text);
         }
     }
 }

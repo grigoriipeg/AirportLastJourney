@@ -42,14 +42,13 @@ namespace AirportLastJourney
 
                 if (infoForm.ShowDialog(this) == DialogResult.OK)
                 {
-
-                    db.Flights.Add(infoForm.Flights);
-                    db.SaveChanges();
-                    flights.Clear();
-                    flights.AddRange(ReadDb());
-                    BinSource.ResetBindings(false);
-                    FlightsDGV.Update();
-                    InfoStatCal();
+                    var result = MessageBox.Show("Вы уверенны, что хотите добавить рейс?", "Добавление", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        db.Flights.Add(infoForm.Flight);
+                        db.SaveChanges();
+                        UpdateDataGrid();
+                    }
                 }
             }
         }
@@ -63,35 +62,64 @@ namespace AirportLastJourney
                 if (MessageBox.Show($"Вы действительно хотите удалить рейс {flight.id_flight}, прилетающий {flight.eta:G}?",
                     "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-
                     db.Flights.Remove(flight);
                     db.SaveChanges();
-
-                    flights.Clear();
-                    flights.AddRange(ReadDb());
-                    BinSource.ResetBindings(false);
-                    InfoStatCal();
+                    UpdateDataGrid();
                 }
             }
         }
-
+        private void UpdateDataGrid()
+        {
+            flights.Clear();
+            flights.AddRange(ReadDb());
+            BinSource.ResetBindings(false);
+            InfoStatCal();
+        }
 
         private void ChangeTool_Click(object sender, EventArgs e)
         {
             // TODO работа с бд
-            var id = (Flights)FlightsDGV.Rows[FlightsDGV.SelectedRows[0].Index].DataBoundItem;
-            var infoForm = new FlightsForm(id);
-            if (infoForm.ShowDialog(this) == DialogResult.OK)
+            using (ApplicationContext db = new ApplicationContext())
             {
-                id.type = infoForm.Flights.type;
-                id.eta = infoForm.Flights.eta;
-                id.countPas = infoForm.Flights.countPas;
-                id.pricePas = infoForm.Flights.pricePas;
-                id.countCrew = infoForm.Flights.countCrew;
-                id.priceCrew = infoForm.Flights.priceCrew;
-                id.procDop = infoForm.Flights.procDop;
-                BinSource.ResetBindings(false);
-                InfoStatCal();
+                var flight = (Flights)FlightsDGV.Rows[FlightsDGV.SelectedRows[0].Index].DataBoundItem;
+                flight = db.Flights.FirstOrDefault(x => x.id_flight == flight.id_flight)!;
+                var infoForm = new FlightsForm(flight);
+                if (infoForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    var result = MessageBox.Show("Вы уверенны, что хотите изменить рейс?", "Изменение", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        flight.eta = infoForm.Flight.eta;
+                        flight.sum = infoForm.Flight.sum;
+                        flight.procDop = infoForm.Flight.procDop;
+                        flight.pricePas = infoForm.Flight.pricePas;
+                        flight.countPas = infoForm.Flight.countPas;
+                        flight.countCrew = infoForm.Flight.countCrew;
+                        flight.priceCrew = infoForm.Flight.priceCrew;
+                        flight.type = infoForm.Flight.type;
+                        db.SaveChanges();
+                        UpdateDataGrid();
+                    }
+                }
+                else
+                {
+                    var result = MessageBox.Show("Может всё-таки изменим?)))", "Изменение", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        flight.eta = infoForm.Flight.eta;
+                        flight.sum = infoForm.Flight.sum;
+                        flight.procDop = infoForm.Flight.procDop;
+                        flight.pricePas = infoForm.Flight.pricePas;
+                        flight.countPas = infoForm.Flight.countPas;
+                        flight.countCrew = infoForm.Flight.countCrew;
+                        flight.priceCrew = infoForm.Flight.priceCrew;
+                        flight.type = infoForm.Flight.type;
+                        db.SaveChanges();
+                        UpdateDataGrid();
+                    }
+                }
+
+                
             }
         }
 
