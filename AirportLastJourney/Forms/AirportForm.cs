@@ -1,5 +1,5 @@
 ﻿using AirportLastJourney.Models;
-using ApplicationContext = AirportLastJourney.Database.ApplicationContext;
+using ApplicationContext = AirportLastJourney.ApplicationContext;
 
 namespace AirportLastJourney
 {

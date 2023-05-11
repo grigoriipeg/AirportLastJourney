@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using AirportLastJourney.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AirportLastJourney.Database
+namespace AirportLastJourney
 {
     public class ApplicationContext : DbContext
     {
         public DbSet<Flights> Flights { get; set; }
+        public DbSet<User> Users { get; set; }
         public ApplicationContext()
         {
             Database.EnsureCreated();
@@ -22,7 +23,7 @@ namespace AirportLastJourney.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AirportLastJourneyDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AirportLastJourneyDbase;Trusted_Connection=True;");
         }
     }
 
