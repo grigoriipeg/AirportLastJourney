@@ -1,5 +1,6 @@
 ﻿using AirportLastJourney.Models;
 using ApplicationContext = AirportLastJourney.ApplicationContext;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace AirportLastJourney
 {
@@ -148,32 +149,32 @@ namespace AirportLastJourney
 
         private void expBtn_Click(object sender, EventArgs e)
         {
-            //var ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-            //Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
-            //Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
-            ////Книга.
-            //ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
-            ////Таблица.
-            //ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
-            //ExcelWorkSheet.Columns.ColumnWidth = 24;
-            //ExcelApp.Cells[1, 1] = "Номер рейса";
-            //ExcelApp.Cells[1, 2] = "Тип самолёта";
-            //ExcelApp.Cells[1, 3] = "Время прибытия";
-            //ExcelApp.Cells[1, 4] = "Кол-во пассажиров";
-            //ExcelApp.Cells[1, 5] = "Сбор за пассажира";
-            //ExcelApp.Cells[1, 6] = "Кол-во экипажа";
-            //ExcelApp.Cells[1, 7] = "Сбор за экипаж";
-            //ExcelApp.Cells[1, 8] = "Процент надбавки";
-            //ExcelApp.Cells[1, 9] = "Выручка";
-            //for (int i = 0; i < FlightsDGV.Rows.Count; i++)
-            //{
-            //    for (int j = 0; j < FlightsDGV.ColumnCount; j++)
-            //    {
-            //        ExcelApp.Cells[i + 2, j + 1] = FlightsDGV.Rows[i].Cells[j].Value;
-            //    }
-            //}
-            //ExcelApp.Visible = true;
-            //ExcelApp.UserControl = true;
+            var ExcelApp = new Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Excel.Worksheet ExcelWorkSheet;
+            //Книга.^
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            ExcelWorkSheet.Columns.ColumnWidth = 24;
+            ExcelApp.Cells[1, 1] = "Номер рейса";
+            ExcelApp.Cells[1, 2] = "Тип самолёта";
+            ExcelApp.Cells[1, 3] = "Время прибытия";
+            ExcelApp.Cells[1, 4] = "Кол-во пассажиров";
+            ExcelApp.Cells[1, 5] = "Сбор за пассажира";
+            ExcelApp.Cells[1, 6] = "Кол-во экипажа";
+            ExcelApp.Cells[1, 7] = "Сбор за экипаж";
+            ExcelApp.Cells[1, 8] = "Процент надбавки";
+            ExcelApp.Cells[1, 9] = "Выручка";
+            for (int i = 0; i < FlightsDGV.Rows.Count; i++)
+            {
+                for (int j = 0; j < FlightsDGV.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 2, j + 1] = FlightsDGV.Rows[i].Cells[j].Value;
+                }
+            }
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }
