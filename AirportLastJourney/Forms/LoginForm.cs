@@ -45,11 +45,12 @@ namespace AirportLastJourney.Forms
                     db.SaveChanges();
                 }
 
+                var userTry = db.Users.FirstOrDefault(x => x.login == LoginTextBox.Text && x.password == PasswordTextBox.Text);
 
-                if (db.Users.FirstOrDefault(x => x.login == LoginTextBox.Text && x.password == PasswordTextBox.Text) != null)
+                if (userTry != null)
                 {
 
-                    AirportForm af = new AirportForm();
+                    AirportForm af = new AirportForm(userTry.isAdmin);
                     af.Owner = this;
                     Hide();
                     af.Show();

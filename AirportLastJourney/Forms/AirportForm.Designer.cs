@@ -74,17 +74,26 @@
             radioButtonDownTo = new RadioButton();
             radioButtonUpTo = new RadioButton();
             comboBoxSort = new ComboBox();
-            label3 = new Label();
-            filter_txt = new TextBox();
-            more_radio = new RadioButton();
-            less_radio = new RadioButton();
             expBtn = new Button();
             openFileDialog1 = new OpenFileDialog();
+            groupBox2 = new GroupBox();
+            label2 = new Label();
+            textBoxTo = new TextBox();
+            label1 = new Label();
+            textBoxFrom = new TextBox();
+            comboBoxCrewCount = new ComboBox();
+            checkBoxCrewCount = new CheckBox();
+            comboBoxPassCount = new ComboBox();
+            checkBoxPassCount = new CheckBox();
+            comboBoxType = new ComboBox();
+            checkBoxType = new CheckBox();
+            checkBoxSum = new CheckBox();
             mainMenuMS.SuspendLayout();
             toolsTS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FlightsDGV).BeginInit();
             infoSS.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // mainMenuMS
@@ -94,7 +103,7 @@
             mainMenuMS.Location = new Point(0, 0);
             mainMenuMS.Name = "mainMenuMS";
             mainMenuMS.Padding = new Padding(7, 2, 0, 2);
-            mainMenuMS.Size = new Size(1608, 24);
+            mainMenuMS.Size = new Size(1616, 24);
             mainMenuMS.TabIndex = 0;
             mainMenuMS.Text = "menuStrip1";
             // 
@@ -167,6 +176,7 @@
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             выходToolStripMenuItem.Size = new Size(54, 20);
             выходToolStripMenuItem.Text = "Выход";
+            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
             // toolsTS
             // 
@@ -174,7 +184,7 @@
             toolsTS.Items.AddRange(new ToolStripItem[] { AddTool, ChangeTool, toolStripSeparator2, DeliteTool });
             toolsTS.Location = new Point(0, 24);
             toolsTS.Name = "toolsTS";
-            toolsTS.Size = new Size(1608, 25);
+            toolsTS.Size = new Size(1616, 25);
             toolsTS.TabIndex = 1;
             toolsTS.Text = "toolStrip1";
             // 
@@ -337,10 +347,10 @@
             // 
             infoSS.ImageScalingSize = new Size(20, 20);
             infoSS.Items.AddRange(new ToolStripItem[] { CountFlightsTSSL, CountPasTSSL, CountCrewTSSL, SumTSSL });
-            infoSS.Location = new Point(0, 599);
+            infoSS.Location = new Point(0, 594);
             infoSS.Name = "infoSS";
             infoSS.Padding = new Padding(1, 0, 16, 0);
-            infoSS.Size = new Size(1608, 22);
+            infoSS.Size = new Size(1616, 22);
             infoSS.TabIndex = 3;
             infoSS.Text = "statusStrip1";
             // 
@@ -374,7 +384,7 @@
             groupBox1.Controls.Add(radioButtonUpTo);
             groupBox1.Controls.Add(comboBoxSort);
             groupBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(1058, 28);
+            groupBox1.Location = new Point(1061, 57);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
@@ -418,57 +428,11 @@
             comboBoxSort.TabIndex = 54;
             comboBoxSort.SelectedIndexChanged += comboBoxSort_SelectedIndexChanged;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(1071, 434);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(169, 24);
-            label3.TabIndex = 51;
-            label3.Text = "Фильтр по цене";
-            // 
-            // filter_txt
-            // 
-            filter_txt.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            filter_txt.Location = new Point(1288, 430);
-            filter_txt.Margin = new Padding(4, 3, 4, 3);
-            filter_txt.Name = "filter_txt";
-            filter_txt.Size = new Size(115, 29);
-            filter_txt.TabIndex = 52;
-            // 
-            // more_radio
-            // 
-            more_radio.AutoSize = true;
-            more_radio.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            more_radio.Location = new Point(1441, 407);
-            more_radio.Margin = new Padding(4, 3, 4, 3);
-            more_radio.Name = "more_radio";
-            more_radio.Size = new Size(98, 28);
-            more_radio.TabIndex = 53;
-            more_radio.TabStop = true;
-            more_radio.Text = "Больше";
-            more_radio.UseVisualStyleBackColor = true;
-            // 
-            // less_radio
-            // 
-            less_radio.AutoSize = true;
-            less_radio.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            less_radio.Location = new Point(1441, 447);
-            less_radio.Margin = new Padding(4, 3, 4, 3);
-            less_radio.Name = "less_radio";
-            less_radio.Size = new Size(102, 28);
-            less_radio.TabIndex = 54;
-            less_radio.TabStop = true;
-            less_radio.Text = "Меньше";
-            less_radio.UseVisualStyleBackColor = true;
-            // 
             // expBtn
             // 
             expBtn.BackColor = SystemColors.ControlLight;
             expBtn.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            expBtn.Location = new Point(1188, 497);
+            expBtn.Location = new Point(1203, 511);
             expBtn.Margin = new Padding(4, 3, 4, 3);
             expBtn.Name = "expBtn";
             expBtn.Size = new Size(252, 72);
@@ -480,16 +444,148 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(textBoxTo);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(textBoxFrom);
+            groupBox2.Controls.Add(comboBoxCrewCount);
+            groupBox2.Controls.Add(checkBoxCrewCount);
+            groupBox2.Controls.Add(comboBoxPassCount);
+            groupBox2.Controls.Add(checkBoxPassCount);
+            groupBox2.Controls.Add(comboBoxType);
+            groupBox2.Controls.Add(checkBoxType);
+            groupBox2.Controls.Add(checkBoxSum);
+            groupBox2.Font = new Font("Segoe UI", 14.5F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox2.Location = new Point(1061, 228);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(534, 193);
+            groupBox2.TabIndex = 56;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Фильтры";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(362, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(34, 28);
+            label2.TabIndex = 73;
+            label2.Text = "до";
+            // 
+            // textBoxTo
+            // 
+            textBoxTo.Enabled = false;
+            textBoxTo.Location = new Point(402, 32);
+            textBoxTo.Name = "textBoxTo";
+            textBoxTo.Size = new Size(126, 33);
+            textBoxTo.TabIndex = 72;
+            textBoxTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxTo.KeyPress += textBoxFromTo_KeyPress;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(182, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 28);
+            label1.TabIndex = 71;
+            label1.Text = "от";
+            // 
+            // textBoxFrom
+            // 
+            textBoxFrom.Enabled = false;
+            textBoxFrom.Location = new Point(228, 32);
+            textBoxFrom.Name = "textBoxFrom";
+            textBoxFrom.Size = new Size(128, 33);
+            textBoxFrom.TabIndex = 70;
+            textBoxFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxFrom.KeyPress += textBoxFromTo_KeyPress;
+            // 
+            // comboBoxCrewCount
+            // 
+            comboBoxCrewCount.Enabled = false;
+            comboBoxCrewCount.FormattingEnabled = true;
+            comboBoxCrewCount.Location = new Point(256, 146);
+            comboBoxCrewCount.Name = "comboBoxCrewCount";
+            comboBoxCrewCount.Size = new Size(272, 33);
+            comboBoxCrewCount.TabIndex = 69;
+            // 
+            // checkBoxCrewCount
+            // 
+            checkBoxCrewCount.AutoSize = true;
+            checkBoxCrewCount.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxCrewCount.Location = new Point(15, 146);
+            checkBoxCrewCount.Name = "checkBoxCrewCount";
+            checkBoxCrewCount.Size = new Size(207, 32);
+            checkBoxCrewCount.TabIndex = 68;
+            checkBoxCrewCount.Text = "По кол-ву экипажа";
+            checkBoxCrewCount.UseVisualStyleBackColor = true;
+            checkBoxCrewCount.Click += checkBox_Click;
+            // 
+            // comboBoxPassCount
+            // 
+            comboBoxPassCount.Enabled = false;
+            comboBoxPassCount.FormattingEnabled = true;
+            comboBoxPassCount.Location = new Point(256, 108);
+            comboBoxPassCount.Name = "comboBoxPassCount";
+            comboBoxPassCount.Size = new Size(272, 33);
+            comboBoxPassCount.TabIndex = 67;
+            // 
+            // checkBoxPassCount
+            // 
+            checkBoxPassCount.AutoSize = true;
+            checkBoxPassCount.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxPassCount.Location = new Point(15, 108);
+            checkBoxPassCount.Name = "checkBoxPassCount";
+            checkBoxPassCount.Size = new Size(241, 32);
+            checkBoxPassCount.TabIndex = 66;
+            checkBoxPassCount.Text = "По кол-ву пассажиров";
+            checkBoxPassCount.UseVisualStyleBackColor = true;
+            checkBoxPassCount.Click += checkBox_Click;
+            // 
+            // comboBoxType
+            // 
+            comboBoxType.Enabled = false;
+            comboBoxType.FormattingEnabled = true;
+            comboBoxType.Location = new Point(256, 70);
+            comboBoxType.Name = "comboBoxType";
+            comboBoxType.Size = new Size(272, 33);
+            comboBoxType.TabIndex = 65;
+            comboBoxType.SelectedIndexChanged += comboBoxType_SelectedIndexChanged;
+            // 
+            // checkBoxType
+            // 
+            checkBoxType.AutoSize = true;
+            checkBoxType.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxType.Location = new Point(15, 70);
+            checkBoxType.Name = "checkBoxType";
+            checkBoxType.Size = new Size(193, 32);
+            checkBoxType.TabIndex = 64;
+            checkBoxType.Text = "По типу самолёта";
+            checkBoxType.UseVisualStyleBackColor = true;
+            checkBoxType.Click += checkBox_Click;
+            // 
+            // checkBoxSum
+            // 
+            checkBoxSum.AutoSize = true;
+            checkBoxSum.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxSum.Location = new Point(15, 32);
+            checkBoxSum.Name = "checkBoxSum";
+            checkBoxSum.Size = new Size(140, 32);
+            checkBoxSum.TabIndex = 62;
+            checkBoxSum.Text = "По выручке";
+            checkBoxSum.UseVisualStyleBackColor = true;
+            checkBoxSum.Click += checkBox_Click;
+            // 
             // AirportForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1608, 621);
+            ClientSize = new Size(1616, 616);
+            Controls.Add(groupBox2);
             Controls.Add(expBtn);
-            Controls.Add(label3);
-            Controls.Add(filter_txt);
-            Controls.Add(more_radio);
-            Controls.Add(less_radio);
             Controls.Add(groupBox1);
             Controls.Add(infoSS);
             Controls.Add(FlightsDGV);
@@ -511,6 +607,8 @@
             infoSS.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -542,10 +640,6 @@
         private System.Windows.Forms.RadioButton rb2;
         private System.Windows.Forms.RadioButton rb3;
         private System.Windows.Forms.RadioButton rb1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox filter_txt;
-        private System.Windows.Forms.RadioButton more_radio;
-        private System.Windows.Forms.RadioButton less_radio;
         private System.Windows.Forms.Button expBtn;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
@@ -570,6 +664,22 @@
         private ComboBox comboBoxSort;
         private RadioButton radioButtonDownTo;
         private RadioButton radioButtonUpTo;
+        private GroupBox groupBox2;
+        private ComboBox comboBoxType;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private ComboBox comboBoxCrewCount;
+        private CheckBox checkBox3;
+        private ComboBox comboBoxPassCount;
+        private CheckBox checkBox4;
+        private Label label2;
+        private TextBox textBoxTo;
+        private Label label1;
+        private TextBox textBoxFrom;
+        private CheckBox checkBoxCrewCount;
+        private CheckBox checkBoxPassCount;
+        private CheckBox checkBoxType;
+        private CheckBox checkBoxSum;
     }
 }
 
