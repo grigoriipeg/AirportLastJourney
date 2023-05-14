@@ -265,7 +265,8 @@ namespace AirportLastJourney
                 // Фильтрация по выручке
                 if (checkBoxSum.Checked)
                 {
-                    FromToFilter();
+                    //FromToFilter();
+                    TextBoxFromToFilter(textBoxFrom, textBoxTo);
 
                     textBoxFrom.Enabled = true;
                     textBoxTo.Enabled = true;
@@ -292,7 +293,8 @@ namespace AirportLastJourney
                 // Фильтрация по кол-ву пассажиров
                 if (checkBoxPassCount.Checked)
                 {
-                    PassangerFilter();
+                    //PassangerFilter();
+                    TextBoxFromToFilter(textBoxPassFrom, textBoxPassTo);
 
                     textBoxPassFrom.Enabled = true;
                     textBoxPassTo.Enabled = true;
@@ -306,6 +308,8 @@ namespace AirportLastJourney
                 // Фильтрация по кол-ву экипажа
                 if (checkBoxCrewCount.Checked)
                 {
+                    TextBoxFromToFilter(textBoxCrewFrom, textBoxCrewTo);
+
                     textBoxCrewFrom.Enabled = true;
                     textBoxCrewTo.Enabled = true;
                 }
@@ -322,130 +326,133 @@ namespace AirportLastJourney
             makeFilter();
         }
 
-        private void FromToFilter()
+        // Фильтрация текстовых полей (принимает поля для реюзабельности кода)
+        private void TextBoxFromToFilter(TextBox textFrom, TextBox textTo)
         {
+            // Заглушки
             object sender = new object();
             EventArgs e = new EventArgs();
             using (var db = new ApplicationContext())
             {
-                if (textBoxFrom.Text.Length != 0 && textBoxTo.Text.Length != 0)
+                if (textFrom.Text.Length != 0 && textTo.Text.Length != 0)
                 {
-                    double.TryParse(String.Concat(textBoxFrom.Text.Split(",")), out var value);
-                    double.TryParse(String.Concat(textBoxTo.Text.Split(",")), out var value2);
+                    double.TryParse(String.Concat(textFrom.Text.Split(",")), out var value);
+                    double.TryParse(String.Concat(textTo.Text.Split(",")), out var value2);
 
                     Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxFrom.SelectionStart = textBoxFrom.Text.Length;
+                    textFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textFrom.SelectionStart = textFrom.Text.Length;
 
 
                     Console.WriteLine(value2.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxTo.Text = value2.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxTo.SelectionStart = textBoxTo.Text.Length;
+                    textTo.Text = value2.ToString("#,#", CultureInfo.InvariantCulture);
+                    textTo.SelectionStart = textTo.Text.Length;
 
                     if (value <= value2)
                     {
-                        var temp = flights.Where(x => x.sum >= value && x.sum <= value2).ToList();
-                        flights.Clear();
-                        flights.AddRange(temp);
+                        if (textFrom == textBoxFrom)
+                        {
+                            var temp = flights.Where(x => x.sum >= value && x.sum <= value2).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxPassFrom)
+                        {
+                            var temp = flights.Where(x => x.countPas >= value && x.countPas <= value2).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxCrewFrom)
+                        {
+                            var temp = flights.Where(x => x.countCrew >= value && x.countCrew <= value2).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
                         comboBoxSort_SelectedIndexChanged(sender, e);
                     }
                     else
+                    {
+                        if (textFrom == textBoxFrom)
+                        {
+                            var temp = flights.Where(x => x.sum >= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxPassFrom)
+                        {
+                            var temp = flights.Where(x => x.countPas >= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxCrewFrom)
+                        {
+                            var temp = flights.Where(x => x.countCrew >= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        comboBoxSort_SelectedIndexChanged(sender, e);
+                    }
+                }
+                else if (textFrom.Text.Length != 0)
+                {
+                    double.TryParse(String.Concat(textFrom.Text.Split(",")), out var value);
+                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
+                    textFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textFrom.SelectionStart = textFrom.Text.Length;
+
+                    if (textFrom == textBoxFrom)
                     {
                         var temp = flights.Where(x => x.sum >= value).ToList();
                         flights.Clear();
                         flights.AddRange(temp);
-                        comboBoxSort_SelectedIndexChanged(sender, e);
                     }
-                }
-                else if (textBoxFrom.Text.Length != 0)
-                {
-                    double.TryParse(String.Concat(textBoxFrom.Text.Split(",")), out var value);
-                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxFrom.SelectionStart = textBoxFrom.Text.Length;
-
-                    var temp = flights.Where(x => x.sum >= value).ToList();
-                    flights.Clear();
-                    flights.AddRange(temp);
-                    comboBoxSort_SelectedIndexChanged(sender, e);
-                }
-                else if (textBoxTo.Text.Length != 0)
-                {
-                    double.TryParse(String.Concat(textBoxTo.Text.Split(",")), out var value);
-                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxTo.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxTo.SelectionStart = textBoxTo.Text.Length;
-
-                    var temp = flights.Where(x => x.sum <= value).ToList();
-                    flights.Clear();
-                    flights.AddRange(temp);
-                    comboBoxSort_SelectedIndexChanged(sender, e);
-                }
-            }
-        }
-
-        private void PassangerFilter()
-        {
-            object sender = new object();
-            EventArgs e = new EventArgs();
-            using (var db = new ApplicationContext())
-            {
-                if (textBoxPassFrom.Text.Length != 0 && textBoxPassTo.Text.Length != 0)
-                {
-                    double.TryParse(String.Concat(textBoxPassFrom.Text.Split(",")), out var value);
-                    double.TryParse(String.Concat(textBoxPassTo.Text.Split(",")), out var value2);
-
-                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxPassFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxPassFrom.SelectionStart = textBoxPassFrom.Text.Length;
-
-
-                    Console.WriteLine(value2.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxPassTo.Text = value2.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxPassTo.SelectionStart = textBoxPassTo.Text.Length;
-
-                    if (value <= value2)
-                    {
-                        var temp = flights.Where(x => x.countPas >= value && x.countPas <= value2).ToList();
-                        flights.Clear();
-                        flights.AddRange(temp);
-                        comboBoxSort_SelectedIndexChanged(sender, e);
-                    }
-                    else
+                    else if (textFrom == textBoxPassFrom)
                     {
                         var temp = flights.Where(x => x.countPas >= value).ToList();
                         flights.Clear();
                         flights.AddRange(temp);
-                        comboBoxSort_SelectedIndexChanged(sender, e);
                     }
-                }
-                else if (textBoxPassFrom.Text.Length != 0)
-                {
-                    double.TryParse(String.Concat(textBoxPassFrom.Text.Split(",")), out var value);
-                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxPassFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxPassFrom.SelectionStart = textBoxPassFrom.Text.Length;
-
-                    var temp = flights.Where(x => x.countPas >= value).ToList();
-                    flights.Clear();
-                    flights.AddRange(temp);
+                    else if (textFrom == textBoxCrewFrom)
+                    {
+                        var temp = flights.Where(x => x.countCrew >= value).ToList();
+                        flights.Clear();
+                        flights.AddRange(temp);
+                    }
                     comboBoxSort_SelectedIndexChanged(sender, e);
                 }
-                else if (textBoxPassTo.Text.Length != 0)
+                else if (textTo.Text.Length != 0)
                 {
-                    double.TryParse(String.Concat(textBoxPassTo.Text.Split(",")), out var value);
+                    double.TryParse(String.Concat(textTo.Text.Split(",")), out var value);
                     Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
-                    textBoxPassTo.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
-                    textBoxPassTo.SelectionStart = textBoxPassTo.Text.Length;
+                    textTo.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textTo.SelectionStart = textTo.Text.Length;
+                    if (value != 0)
+                    {
+                        if (textFrom == textBoxFrom)
+                        {
+                            var temp = flights.Where(x => x.sum <= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxPassFrom)
+                        {
+                            var temp = flights.Where(x => x.countPas <= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
 
-                    var temp = flights.Where(x => x.countPas <= value).ToList();
-                    flights.Clear();
-                    flights.AddRange(temp);
+                        }
+                        else if (textFrom == textBoxCrewFrom)
+                        {
+                            var temp = flights.Where(x => x.countCrew <= value).ToList();
+                            flights.Clear();
+                            flights.AddRange(temp);
+
+                        }
+                    }
                     comboBoxSort_SelectedIndexChanged(sender, e);
                 }
             }
         }
-
         private void textBoxFromTo_TextChanged(object sender, EventArgs e)
         {
             makeFilter();

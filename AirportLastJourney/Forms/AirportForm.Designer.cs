@@ -494,6 +494,7 @@
             textBoxCrewTo.Size = new Size(88, 33);
             textBoxCrewTo.TabIndex = 80;
             textBoxCrewTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxCrewTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label6
             // 
@@ -512,6 +513,7 @@
             textBoxCrewFrom.Size = new Size(88, 33);
             textBoxCrewFrom.TabIndex = 78;
             textBoxCrewFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxCrewFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label3
             // 
@@ -530,6 +532,7 @@
             textBoxPassTo.Size = new Size(88, 33);
             textBoxPassTo.TabIndex = 76;
             textBoxPassTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxPassTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label4
             // 
@@ -548,6 +551,7 @@
             textBoxPassFrom.Size = new Size(88, 33);
             textBoxPassFrom.TabIndex = 74;
             textBoxPassFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxPassFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label2
             // 
