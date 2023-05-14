@@ -262,7 +262,7 @@ namespace AirportLastJourney
             {
                 SortByArg(db.Flights.ToList());
 
-
+                // Фильтрация по выручке
                 if (checkBoxSum.Checked)
                 {
                     FromToFilter();
@@ -276,6 +276,7 @@ namespace AirportLastJourney
                     textBoxTo.Enabled = false;
                 }
 
+                // Фильтрация по типу
                 if (checkBoxType.Checked)
                 {
                     comboBoxType.Enabled = true;
@@ -288,22 +289,30 @@ namespace AirportLastJourney
                     comboBoxType.Enabled = false;
                 }
 
+                // Фильтрация по кол-ву пассажиров
                 if (checkBoxPassCount.Checked)
                 {
-                    comboBoxPassCount.Enabled = true;
+                    PassangerFilter();
+
+                    textBoxPassFrom.Enabled = true;
+                    textBoxPassTo.Enabled = true;
                 }
                 else
                 {
-                    comboBoxPassCount.Enabled = false;
+                    textBoxPassFrom.Enabled = false;
+                    textBoxPassTo.Enabled = false;
                 }
 
+                // Фильтрация по кол-ву экипажа
                 if (checkBoxCrewCount.Checked)
                 {
-                    comboBoxCrewCount.Enabled = true;
+                    textBoxCrewFrom.Enabled = true;
+                    textBoxCrewTo.Enabled = true;
                 }
                 else
                 {
-                    comboBoxCrewCount.Enabled = false;
+                    textBoxCrewFrom.Enabled = false;
+                    textBoxCrewTo.Enabled = false;
                 }
 
             }
@@ -375,6 +384,68 @@ namespace AirportLastJourney
             }
         }
 
+        private void PassangerFilter()
+        {
+            object sender = new object();
+            EventArgs e = new EventArgs();
+            using (var db = new ApplicationContext())
+            {
+                if (textBoxPassFrom.Text.Length != 0 && textBoxPassTo.Text.Length != 0)
+                {
+                    double.TryParse(String.Concat(textBoxPassFrom.Text.Split(",")), out var value);
+                    double.TryParse(String.Concat(textBoxPassTo.Text.Split(",")), out var value2);
+
+                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
+                    textBoxPassFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textBoxPassFrom.SelectionStart = textBoxPassFrom.Text.Length;
+
+
+                    Console.WriteLine(value2.ToString("#,#", CultureInfo.InvariantCulture));
+                    textBoxPassTo.Text = value2.ToString("#,#", CultureInfo.InvariantCulture);
+                    textBoxPassTo.SelectionStart = textBoxPassTo.Text.Length;
+
+                    if (value <= value2)
+                    {
+                        var temp = flights.Where(x => x.countPas >= value && x.countPas <= value2).ToList();
+                        flights.Clear();
+                        flights.AddRange(temp);
+                        comboBoxSort_SelectedIndexChanged(sender, e);
+                    }
+                    else
+                    {
+                        var temp = flights.Where(x => x.countPas >= value).ToList();
+                        flights.Clear();
+                        flights.AddRange(temp);
+                        comboBoxSort_SelectedIndexChanged(sender, e);
+                    }
+                }
+                else if (textBoxPassFrom.Text.Length != 0)
+                {
+                    double.TryParse(String.Concat(textBoxPassFrom.Text.Split(",")), out var value);
+                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
+                    textBoxPassFrom.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textBoxPassFrom.SelectionStart = textBoxPassFrom.Text.Length;
+
+                    var temp = flights.Where(x => x.countPas >= value).ToList();
+                    flights.Clear();
+                    flights.AddRange(temp);
+                    comboBoxSort_SelectedIndexChanged(sender, e);
+                }
+                else if (textBoxPassTo.Text.Length != 0)
+                {
+                    double.TryParse(String.Concat(textBoxPassTo.Text.Split(",")), out var value);
+                    Console.WriteLine(value.ToString("#,#", CultureInfo.InvariantCulture));
+                    textBoxPassTo.Text = value.ToString("#,#", CultureInfo.InvariantCulture);
+                    textBoxPassTo.SelectionStart = textBoxPassTo.Text.Length;
+
+                    var temp = flights.Where(x => x.countPas <= value).ToList();
+                    flights.Clear();
+                    flights.AddRange(temp);
+                    comboBoxSort_SelectedIndexChanged(sender, e);
+                }
+            }
+        }
+
         private void textBoxFromTo_TextChanged(object sender, EventArgs e)
         {
             makeFilter();
@@ -386,7 +457,7 @@ namespace AirportLastJourney
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            makeFilter(); 
+            makeFilter();
         }
     }
 }

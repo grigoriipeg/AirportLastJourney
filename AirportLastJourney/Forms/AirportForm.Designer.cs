@@ -77,13 +77,19 @@
             expBtn = new Button();
             openFileDialog1 = new OpenFileDialog();
             groupBox2 = new GroupBox();
+            label5 = new Label();
+            textBoxCrewTo = new TextBox();
+            label6 = new Label();
+            textBoxCrewFrom = new TextBox();
+            label3 = new Label();
+            textBoxPassTo = new TextBox();
+            label4 = new Label();
+            textBoxPassFrom = new TextBox();
             label2 = new Label();
             textBoxTo = new TextBox();
             label1 = new Label();
             textBoxFrom = new TextBox();
-            comboBoxCrewCount = new ComboBox();
             checkBoxCrewCount = new CheckBox();
-            comboBoxPassCount = new ComboBox();
             checkBoxPassCount = new CheckBox();
             comboBoxType = new ComboBox();
             checkBoxType = new CheckBox();
@@ -446,13 +452,19 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(textBoxCrewTo);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(textBoxCrewFrom);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(textBoxPassTo);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(textBoxPassFrom);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(textBoxTo);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(textBoxFrom);
-            groupBox2.Controls.Add(comboBoxCrewCount);
             groupBox2.Controls.Add(checkBoxCrewCount);
-            groupBox2.Controls.Add(comboBoxPassCount);
             groupBox2.Controls.Add(checkBoxPassCount);
             groupBox2.Controls.Add(comboBoxType);
             groupBox2.Controls.Add(checkBoxType);
@@ -464,6 +476,78 @@
             groupBox2.TabIndex = 56;
             groupBox2.TabStop = false;
             groupBox2.Text = "Фильтры";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(402, 149);
+            label5.Name = "label5";
+            label5.Size = new Size(34, 28);
+            label5.TabIndex = 81;
+            label5.Text = "до";
+            // 
+            // textBoxCrewTo
+            // 
+            textBoxCrewTo.Enabled = false;
+            textBoxCrewTo.Location = new Point(439, 146);
+            textBoxCrewTo.Name = "textBoxCrewTo";
+            textBoxCrewTo.Size = new Size(88, 33);
+            textBoxCrewTo.TabIndex = 80;
+            textBoxCrewTo.TextChanged += textBoxFromTo_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(262, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(40, 28);
+            label6.TabIndex = 79;
+            label6.Text = "от";
+            // 
+            // textBoxCrewFrom
+            // 
+            textBoxCrewFrom.Enabled = false;
+            textBoxCrewFrom.Location = new Point(308, 146);
+            textBoxCrewFrom.Name = "textBoxCrewFrom";
+            textBoxCrewFrom.Size = new Size(88, 33);
+            textBoxCrewFrom.TabIndex = 78;
+            textBoxCrewFrom.TextChanged += textBoxFromTo_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(402, 111);
+            label3.Name = "label3";
+            label3.Size = new Size(34, 28);
+            label3.TabIndex = 77;
+            label3.Text = "до";
+            // 
+            // textBoxPassTo
+            // 
+            textBoxPassTo.Enabled = false;
+            textBoxPassTo.Location = new Point(439, 108);
+            textBoxPassTo.Name = "textBoxPassTo";
+            textBoxPassTo.Size = new Size(88, 33);
+            textBoxPassTo.TabIndex = 76;
+            textBoxPassTo.TextChanged += textBoxFromTo_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(262, 111);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 28);
+            label4.TabIndex = 75;
+            label4.Text = "от";
+            // 
+            // textBoxPassFrom
+            // 
+            textBoxPassFrom.Enabled = false;
+            textBoxPassFrom.Location = new Point(308, 108);
+            textBoxPassFrom.Name = "textBoxPassFrom";
+            textBoxPassFrom.Size = new Size(88, 33);
+            textBoxPassFrom.TabIndex = 74;
+            textBoxPassFrom.TextChanged += textBoxFromTo_TextChanged;
             // 
             // label2
             // 
@@ -503,15 +587,6 @@
             textBoxFrom.TextChanged += textBoxFromTo_TextChanged;
             textBoxFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
-            // comboBoxCrewCount
-            // 
-            comboBoxCrewCount.Enabled = false;
-            comboBoxCrewCount.FormattingEnabled = true;
-            comboBoxCrewCount.Location = new Point(256, 146);
-            comboBoxCrewCount.Name = "comboBoxCrewCount";
-            comboBoxCrewCount.Size = new Size(272, 33);
-            comboBoxCrewCount.TabIndex = 69;
-            // 
             // checkBoxCrewCount
             // 
             checkBoxCrewCount.AutoSize = true;
@@ -523,15 +598,6 @@
             checkBoxCrewCount.Text = "По кол-ву экипажа";
             checkBoxCrewCount.UseVisualStyleBackColor = true;
             checkBoxCrewCount.Click += checkBox_Click;
-            // 
-            // comboBoxPassCount
-            // 
-            comboBoxPassCount.Enabled = false;
-            comboBoxPassCount.FormattingEnabled = true;
-            comboBoxPassCount.Location = new Point(256, 108);
-            comboBoxPassCount.Name = "comboBoxPassCount";
-            comboBoxPassCount.Size = new Size(272, 33);
-            comboBoxPassCount.TabIndex = 67;
             // 
             // checkBoxPassCount
             // 
@@ -668,9 +734,7 @@
         private ComboBox comboBoxType;
         private CheckBox checkBox2;
         private CheckBox checkBox1;
-        private ComboBox comboBoxCrewCount;
         private CheckBox checkBox3;
-        private ComboBox comboBoxPassCount;
         private CheckBox checkBox4;
         private Label label2;
         private TextBox textBoxTo;
@@ -680,6 +744,14 @@
         private CheckBox checkBoxPassCount;
         private CheckBox checkBoxType;
         private CheckBox checkBoxSum;
+        private Label label5;
+        private TextBox textBoxCrewTo;
+        private Label label6;
+        private TextBox textBoxCrewFrom;
+        private Label label3;
+        private TextBox textBoxPassTo;
+        private Label label4;
+        private TextBox textBoxPassFrom;
     }
 }
 
