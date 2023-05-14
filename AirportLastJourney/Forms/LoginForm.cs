@@ -38,8 +38,12 @@ namespace AirportLastJourney.Forms
                     password = "user",
                     isAdmin = false,
                 };
-                db.Users.AddRange(userAdmin, user);
-                db.SaveChanges();
+
+                if (db.Users.OrderBy(x => x.id_user).FirstOrDefault() == null)
+                {
+                    db.Users.AddRange(userAdmin, user);
+                    db.SaveChanges();
+                }
 
 
                 if (db.Users.FirstOrDefault(x => x.login == LoginTextBox.Text && x.password == PasswordTextBox.Text) != null)
@@ -47,11 +51,13 @@ namespace AirportLastJourney.Forms
 
                     AirportForm af = new AirportForm();
                     af.Owner = this;
-                    this.Hide();
+                    Hide();
                     af.Show();
                 }
-
-
+                else
+                {
+                    MessageBox.Show("Ебалай", "Да");
+                };
             }
         }
     }

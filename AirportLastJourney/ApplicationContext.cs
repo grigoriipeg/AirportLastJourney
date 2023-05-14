@@ -23,7 +23,7 @@ namespace AirportLastJourney
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AirportLastJourneyDbase;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AirportLastJourneyDatabase;Trusted_Connection=True;");
         }
     }
 

@@ -17,6 +17,21 @@ namespace AirportLastJourney
             BinSource = new BindingSource();
             BinSource.DataSource = flights;
             FlightsDGV.DataSource = BinSource;
+
+
+
+            comboBoxSort.DataSource = new String[]
+            {
+                "Номеру рейса",
+                "Типу самолёта",
+                "Времени прибытия",
+                "По кол-ву пассажиров",
+                "Сбору за пассажира",
+                "По кол-ву экипажа",
+                "Сбору за экипаж",
+                "Проценту надбавки",
+                "Выручке"
+            };
         }
 
         public List<Flights> ReadDb()
@@ -48,7 +63,7 @@ namespace AirportLastJourney
                     {
                         db.Flights.Add(infoForm.Flight);
                         db.SaveChanges();
-                        UpdateDataGrid();
+                        UpdateDataGrid(ReadDb());
                     }
                 }
             }
@@ -65,16 +80,15 @@ namespace AirportLastJourney
                 {
                     db.Flights.Remove(flight);
                     db.SaveChanges();
-                    UpdateDataGrid();
+                    UpdateDataGrid(ReadDb());
                 }
             }
         }
-        private void UpdateDataGrid()
+        private void UpdateDataGrid(List<Flights> f)
         {
             flights.Clear();
-            flights.AddRange(ReadDb());
+            flights.AddRange(f);
             BinSource.ResetBindings(false);
-            InfoStatCal();
         }
 
         private void ChangeTool_Click(object sender, EventArgs e)
@@ -99,7 +113,7 @@ namespace AirportLastJourney
                         flight.priceCrew = infoForm.Flight.priceCrew;
                         flight.type = infoForm.Flight.type;
                         db.SaveChanges();
-                        UpdateDataGrid();
+                        UpdateDataGrid(ReadDb());
                     }
                 }
                 else
@@ -116,11 +130,11 @@ namespace AirportLastJourney
                         flight.priceCrew = infoForm.Flight.priceCrew;
                         flight.type = infoForm.Flight.type;
                         db.SaveChanges();
-                        UpdateDataGrid();
+                        UpdateDataGrid(ReadDb());
                     }
                 }
 
-                
+
             }
         }
 
@@ -132,15 +146,6 @@ namespace AirportLastJourney
             DeliteTool.Enabled =
             ChangeTool.Enabled =
             FlightsDGV.SelectedRows.Count > 0;
-        }
-
-
-        private void InfoStatCal()
-        {
-            CountFlightsTSSL.Text = $"Кол-во рейсов: {flights.Count}";
-            CountPasTSSL.Text = $"Всего пассажиров: {flights.Sum(x => x.countPas)}";
-            CountCrewTSSL.Text = $"Всего экипажа: {flights.Sum(x => x.countCrew)}";
-            SumTSSL.Text = $"Общая сумма: {flights.Sum(x => x.sum)}";
         }
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -175,6 +180,76 @@ namespace AirportLastJourney
             }
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
+        }
+
+
+        private void AirportForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                switch (comboBoxSort.SelectedItem)
+                {
+                    case "Номеру рейса":
+                        SortByArg(db.Flights.OrderBy(x => x.id_flight).ToList());
+                        break;
+                    case "Типу самолёта":
+                        SortByArg(db.Flights.OrderBy(x => x.type).ToList());
+                        break;
+                    case "Времени прибытия":
+                        SortByArg(db.Flights.OrderBy(x => x.eta).ToList());
+                        break;
+                    case "По кол-ву пассажиров":
+                        SortByArg(db.Flights.OrderBy(x => x.countPas).ToList());
+                        break;
+                    case "Сбору за пассажира":
+                        SortByArg(db.Flights.OrderBy(x => x.pricePas).ToList());
+                        break;
+                    case "По кол-ву экипажа":
+                        SortByArg(db.Flights.OrderBy(x => x.countCrew).ToList());
+                        break;
+                    case "Сбору за экипаж":
+                        SortByArg(db.Flights.OrderBy(x => x.priceCrew).ToList());
+                        break;
+                    case "Проценту надбавки":
+                        SortByArg(db.Flights.OrderBy(x => x.procDop).ToList());
+                        break;
+                    case "Выручке":
+                        SortByArg(db.Flights.OrderBy(x => x.sum).ToList());
+                        break;
+                    default: break;
+                }
+            }
+        }
+
+        private void SortByArg(List<Flights> flightList)
+        {
+            if (radioButtonUpTo.Checked)
+            {
+                UpdateDataGrid(flightList);
+            }
+            else if (radioButtonDownTo.Checked)
+            {
+                flightList.Reverse();
+                UpdateDataGrid(flightList);
+            }
+        }
+
+        private void radioButton_Click(object sender, EventArgs e)
+        {
+            comboBoxSort_SelectedIndexChanged(sender, e);
+        }
+
+        private void FlightsDGV_Paint(object sender, PaintEventArgs e)
+        {
+            CountFlightsTSSL.Text = $"Кол-во рейсов: {flights.Count}";
+            CountPasTSSL.Text = $"Всего пассажиров: {flights.Sum(x => x.countPas)}";
+            CountCrewTSSL.Text = $"Всего экипажа: {flights.Sum(x => x.countCrew)}";
+            SumTSSL.Text = $"Общая сумма: {flights.Sum(x => x.sum)}";
         }
     }
 }
