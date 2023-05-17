@@ -12,6 +12,7 @@ namespace AirportLastJourney
         {
             InitializeComponent();
             FillDirection();
+            
             using (ApplicationContext db = new ApplicationContext())
             {
                 var last = db.Flights.OrderBy(x => x.id_flight).LastOrDefault();
@@ -33,6 +34,8 @@ namespace AirportLastJourney
                 };
                 comboType.SelectedItem = flight.type;
             }
+
+            dateTimeETA.MinDate = DateTime.Now;
 
             this.Text = "Добавление рейса";
             
