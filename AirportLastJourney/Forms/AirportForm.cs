@@ -476,8 +476,7 @@ namespace AirportLastJourney
             {
                 if (e.Value != null)
                 {
-                    // Check for the string "pink" in the cell.
-                    string stringValue = Enum.GetName(typeof(Types), (int)e.Value);
+                    string stringValue = Enum.GetName(typeof(Types), (int)e.Value)!;
 
                     e.Value = stringValue;
 

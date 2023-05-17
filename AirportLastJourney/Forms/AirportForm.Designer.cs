@@ -488,6 +488,8 @@
             textBoxCrewTo.Name = "textBoxCrewTo";
             textBoxCrewTo.Size = new Size(88, 33);
             textBoxCrewTo.TabIndex = 80;
+            textBoxCrewTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxCrewTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label6
             // 
@@ -505,6 +507,8 @@
             textBoxCrewFrom.Name = "textBoxCrewFrom";
             textBoxCrewFrom.Size = new Size(88, 33);
             textBoxCrewFrom.TabIndex = 78;
+            textBoxCrewFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxCrewFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label3
             // 
@@ -522,6 +526,8 @@
             textBoxPassTo.Name = "textBoxPassTo";
             textBoxPassTo.Size = new Size(88, 33);
             textBoxPassTo.TabIndex = 76;
+            textBoxPassTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxPassTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label4
             // 
@@ -539,6 +545,8 @@
             textBoxPassFrom.Name = "textBoxPassFrom";
             textBoxPassFrom.Size = new Size(88, 33);
             textBoxPassFrom.TabIndex = 74;
+            textBoxPassFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxPassFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label2
             // 
@@ -556,6 +564,8 @@
             textBoxTo.Name = "textBoxTo";
             textBoxTo.Size = new Size(126, 33);
             textBoxTo.TabIndex = 72;
+            textBoxTo.TextChanged += textBoxFromTo_TextChanged;
+            textBoxTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label1
             // 
@@ -573,6 +583,8 @@
             textBoxFrom.Name = "textBoxFrom";
             textBoxFrom.Size = new Size(128, 33);
             textBoxFrom.TabIndex = 70;
+            textBoxFrom.TextChanged += textBoxFromTo_TextChanged;
+            textBoxFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // checkBoxCrewCount
             // 
@@ -584,6 +596,7 @@
             checkBoxCrewCount.TabIndex = 68;
             checkBoxCrewCount.Text = "По кол-ву экипажа";
             checkBoxCrewCount.UseVisualStyleBackColor = true;
+            checkBoxCrewCount.Click += checkBox_Click;
             // 
             // checkBoxPassCount
             // 
@@ -595,6 +608,7 @@
             checkBoxPassCount.TabIndex = 66;
             checkBoxPassCount.Text = "По кол-ву пассажиров";
             checkBoxPassCount.UseVisualStyleBackColor = true;
+            checkBoxPassCount.Click += checkBox_Click;
             // 
             // comboBoxType
             // 
@@ -604,6 +618,7 @@
             comboBoxType.Name = "comboBoxType";
             comboBoxType.Size = new Size(272, 33);
             comboBoxType.TabIndex = 65;
+            comboBoxType.SelectedIndexChanged += comboBoxType_SelectedIndexChanged;
             // 
             // checkBoxType
             // 
@@ -615,6 +630,7 @@
             checkBoxType.TabIndex = 64;
             checkBoxType.Text = "По типу самолёта";
             checkBoxType.UseVisualStyleBackColor = true;
+            checkBoxType.Click += checkBox_Click;
             // 
             // checkBoxSum
             // 
@@ -626,6 +642,7 @@
             checkBoxSum.TabIndex = 62;
             checkBoxSum.Text = "По выручке";
             checkBoxSum.UseVisualStyleBackColor = true;
+            checkBoxSum.Click += checkBox_Click;
             // 
             // AirportForm
             // 
