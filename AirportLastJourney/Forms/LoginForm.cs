@@ -57,7 +57,7 @@ namespace AirportLastJourney.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Ебалай", "Да");
+                    MessageBox.Show("Неверный логин или пароль!", "Ошибка");
                 };
             }
         }
