@@ -23,7 +23,7 @@ namespace AirportLastJourney
                 flight = new Flights
                 {
                     type = Types.Boeing,
-                    eta = DateTime.Now.AddDays(1),
+                    eta = DateTime.Now,
                     countPas = (int)numericCountPas.Value,
                     pricePas = (double)numericPricePas.Value,
                     countCrew = (int)numericCountCrew.Value,
