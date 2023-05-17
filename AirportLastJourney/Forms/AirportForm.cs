@@ -242,7 +242,7 @@ namespace AirportLastJourney
                     {
                         ExcelApp.Cells[i + 2, j + 1] = FlightsDGV.Rows[i].Cells[j].Value;
                     }
-                    
+
                 }
             }
             ExcelApp.Visible = true;
@@ -480,7 +480,7 @@ namespace AirportLastJourney
                     string stringValue = Enum.GetName(typeof(Types), (int)e.Value);
 
                     e.Value = stringValue;
-                    
+
                 }
             }
         }

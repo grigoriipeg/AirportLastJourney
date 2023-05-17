@@ -28,239 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AirportForm));
-            this.mainMenuMS = new System.Windows.Forms.MenuStrip();
-            this.File = new System.Windows.Forms.ToolStripMenuItem();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Correction = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangeMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.DeliteMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.About = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsTS = new System.Windows.Forms.ToolStrip();
-            this.AddTool = new System.Windows.Forms.ToolStripButton();
-            this.ChangeTool = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.DeliteTool = new System.Windows.Forms.ToolStripButton();
-            this.FlightsDGV = new System.Windows.Forms.DataGridView();
-            this.numFlightColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countPasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price4PasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countCrewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price4CrewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.procDopColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sumColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.infoSS = new System.Windows.Forms.StatusStrip();
-            this.CountFlightsTSSL = new System.Windows.Forms.ToolStripStatusLabel();
-            this.CountPasTSSL = new System.Windows.Forms.ToolStripStatusLabel();
-            this.CountCrewTSSL = new System.Windows.Forms.ToolStripStatusLabel();
-            this.SumTSSL = new System.Windows.Forms.ToolStripStatusLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonDownTo = new System.Windows.Forms.RadioButton();
-            this.radioButtonUpTo = new System.Windows.Forms.RadioButton();
-            this.comboBoxSort = new System.Windows.Forms.ComboBox();
-            this.expBtn = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxCrewTo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxCrewFrom = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxPassTo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxPassFrom = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxFrom = new System.Windows.Forms.TextBox();
-            this.checkBoxCrewCount = new System.Windows.Forms.CheckBox();
-            this.checkBoxPassCount = new System.Windows.Forms.CheckBox();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.checkBoxType = new System.Windows.Forms.CheckBox();
-            this.checkBoxSum = new System.Windows.Forms.CheckBox();
-            this.mainMenuMS.SuspendLayout();
-            this.toolsTS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlightsDGV)).BeginInit();
-            this.infoSS.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            mainMenuMS = new MenuStrip();
+            File = new ToolStripMenuItem();
+            открытьToolStripMenuItem = new ToolStripMenuItem();
+            экспортToolStripMenuItem = new ToolStripMenuItem();
+            Correction = new ToolStripMenuItem();
+            AddMenu = new ToolStripMenuItem();
+            ChangeMenu = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            DeliteMenu = new ToolStripMenuItem();
+            About = new ToolStripMenuItem();
+            выходToolStripMenuItem = new ToolStripMenuItem();
+            toolsTS = new ToolStrip();
+            AddTool = new ToolStripButton();
+            ChangeTool = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            DeliteTool = new ToolStripButton();
+            FlightsDGV = new DataGridView();
+            numFlightColumn = new DataGridViewTextBoxColumn();
+            typeColumn = new DataGridViewTextBoxColumn();
+            etaColumn = new DataGridViewTextBoxColumn();
+            countPasColumn = new DataGridViewTextBoxColumn();
+            price4PasColumn = new DataGridViewTextBoxColumn();
+            countCrewColumn = new DataGridViewTextBoxColumn();
+            price4CrewColumn = new DataGridViewTextBoxColumn();
+            procDopColumn = new DataGridViewTextBoxColumn();
+            sumColumn = new DataGridViewTextBoxColumn();
+            infoSS = new StatusStrip();
+            CountFlightsTSSL = new ToolStripStatusLabel();
+            CountPasTSSL = new ToolStripStatusLabel();
+            CountCrewTSSL = new ToolStripStatusLabel();
+            SumTSSL = new ToolStripStatusLabel();
+            groupBox1 = new GroupBox();
+            radioButtonDownTo = new RadioButton();
+            radioButtonUpTo = new RadioButton();
+            comboBoxSort = new ComboBox();
+            expBtn = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            groupBox2 = new GroupBox();
+            label5 = new Label();
+            textBoxCrewTo = new TextBox();
+            label6 = new Label();
+            textBoxCrewFrom = new TextBox();
+            label3 = new Label();
+            textBoxPassTo = new TextBox();
+            label4 = new Label();
+            textBoxPassFrom = new TextBox();
+            label2 = new Label();
+            textBoxTo = new TextBox();
+            label1 = new Label();
+            textBoxFrom = new TextBox();
+            checkBoxCrewCount = new CheckBox();
+            checkBoxPassCount = new CheckBox();
+            comboBoxType = new ComboBox();
+            checkBoxType = new CheckBox();
+            checkBoxSum = new CheckBox();
+            mainMenuMS.SuspendLayout();
+            toolsTS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)FlightsDGV).BeginInit();
+            infoSS.SuspendLayout();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // mainMenuMS
             // 
-            this.mainMenuMS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.mainMenuMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.File,
-            this.Correction,
-            this.About,
-            this.выходToolStripMenuItem});
-            this.mainMenuMS.Location = new System.Drawing.Point(0, 0);
-            this.mainMenuMS.Name = "mainMenuMS";
-            this.mainMenuMS.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.mainMenuMS.Size = new System.Drawing.Size(1616, 24);
-            this.mainMenuMS.TabIndex = 0;
-            this.mainMenuMS.Text = "menuStrip1";
+            mainMenuMS.ImageScalingSize = new Size(20, 20);
+            mainMenuMS.Items.AddRange(new ToolStripItem[] { File, Correction, About, выходToolStripMenuItem });
+            mainMenuMS.Location = new Point(0, 0);
+            mainMenuMS.Name = "mainMenuMS";
+            mainMenuMS.Padding = new Padding(7, 2, 0, 2);
+            mainMenuMS.Size = new Size(1616, 24);
+            mainMenuMS.TabIndex = 0;
+            mainMenuMS.Text = "menuStrip1";
             // 
             // File
             // 
-            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.открытьToolStripMenuItem,
-            this.экспортToolStripMenuItem});
-            this.File.Name = "File";
-            this.File.Size = new System.Drawing.Size(48, 20);
-            this.File.Text = "Файл";
+            File.DropDownItems.AddRange(new ToolStripItem[] { открытьToolStripMenuItem, экспортToolStripMenuItem });
+            File.Name = "File";
+            File.Size = new Size(48, 20);
+            File.Text = "Файл";
             // 
             // открытьToolStripMenuItem
             // 
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.открытьToolStripMenuItem.Text = "Открыть";
+            открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            открытьToolStripMenuItem.Size = new Size(121, 22);
+            открытьToolStripMenuItem.Text = "Открыть";
             // 
             // экспортToolStripMenuItem
             // 
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
-            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.expBtn_Click);
+            экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            экспортToolStripMenuItem.Size = new Size(121, 22);
+            экспортToolStripMenuItem.Text = "Экспорт";
+            экспортToolStripMenuItem.Click += expBtn_Click;
             // 
             // Correction
             // 
-            this.Correction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddMenu,
-            this.ChangeMenu,
-            this.toolStripSeparator1,
-            this.DeliteMenu});
-            this.Correction.Name = "Correction";
-            this.Correction.Size = new System.Drawing.Size(59, 20);
-            this.Correction.Text = "Правка";
+            Correction.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, ChangeMenu, toolStripSeparator1, DeliteMenu });
+            Correction.Name = "Correction";
+            Correction.Size = new Size(59, 20);
+            Correction.Text = "Правка";
             // 
             // AddMenu
             // 
-            this.AddMenu.Name = "AddMenu";
-            this.AddMenu.Size = new System.Drawing.Size(180, 22);
-            this.AddMenu.Text = "Добавить";
-            this.AddMenu.Click += new System.EventHandler(this.AddTool_Click);
+            AddMenu.Name = "AddMenu";
+            AddMenu.Size = new Size(128, 22);
+            AddMenu.Text = "Добавить";
+            AddMenu.Click += AddTool_Click;
             // 
             // ChangeMenu
             // 
-            this.ChangeMenu.Enabled = false;
-            this.ChangeMenu.Name = "ChangeMenu";
-            this.ChangeMenu.Size = new System.Drawing.Size(180, 22);
-            this.ChangeMenu.Text = "Изменить";
-            this.ChangeMenu.Click += new System.EventHandler(this.ChangeTool_Click);
+            ChangeMenu.Enabled = false;
+            ChangeMenu.Name = "ChangeMenu";
+            ChangeMenu.Size = new Size(128, 22);
+            ChangeMenu.Text = "Изменить";
+            ChangeMenu.Click += ChangeTool_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(125, 6);
             // 
             // DeliteMenu
             // 
-            this.DeliteMenu.Enabled = false;
-            this.DeliteMenu.Name = "DeliteMenu";
-            this.DeliteMenu.Size = new System.Drawing.Size(180, 22);
-            this.DeliteMenu.Text = "Удалить";
-            this.DeliteMenu.Click += new System.EventHandler(this.DeleteTool_Click);
+            DeliteMenu.Enabled = false;
+            DeliteMenu.Name = "DeliteMenu";
+            DeliteMenu.Size = new Size(128, 22);
+            DeliteMenu.Text = "Удалить";
+            DeliteMenu.Click += DeleteTool_Click;
             // 
             // About
             // 
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(94, 20);
-            this.About.Text = "О программе";
-            this.About.Click += new System.EventHandler(this.About_Click);
+            About.Name = "About";
+            About.Size = new Size(94, 20);
+            About.Text = "О программе";
+            About.Click += About_Click;
             // 
             // выходToolStripMenuItem
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            выходToolStripMenuItem.Size = new Size(54, 20);
+            выходToolStripMenuItem.Text = "Выход";
+            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
             // toolsTS
             // 
-            this.toolsTS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolsTS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddTool,
-            this.ChangeTool,
-            this.toolStripSeparator2,
-            this.DeliteTool});
-            this.toolsTS.Location = new System.Drawing.Point(0, 24);
-            this.toolsTS.Name = "toolsTS";
-            this.toolsTS.Size = new System.Drawing.Size(1616, 25);
-            this.toolsTS.TabIndex = 1;
-            this.toolsTS.Text = "toolStrip1";
+            toolsTS.ImageScalingSize = new Size(20, 20);
+            toolsTS.Items.AddRange(new ToolStripItem[] { AddTool, ChangeTool, toolStripSeparator2, DeliteTool });
+            toolsTS.Location = new Point(0, 24);
+            toolsTS.Name = "toolsTS";
+            toolsTS.Size = new Size(1616, 25);
+            toolsTS.TabIndex = 1;
+            toolsTS.Text = "toolStrip1";
             // 
             // AddTool
             // 
-            this.AddTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddTool.Name = "AddTool";
-            this.AddTool.Size = new System.Drawing.Size(63, 22);
-            this.AddTool.Text = "Добавить";
-            this.AddTool.Click += new System.EventHandler(this.AddTool_Click);
+            AddTool.ImageTransparentColor = Color.Magenta;
+            AddTool.Name = "AddTool";
+            AddTool.Size = new Size(63, 22);
+            AddTool.Text = "Добавить";
+            AddTool.Click += AddTool_Click;
             // 
             // ChangeTool
             // 
-            this.ChangeTool.Enabled = false;
-            this.ChangeTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ChangeTool.Name = "ChangeTool";
-            this.ChangeTool.Size = new System.Drawing.Size(65, 22);
-            this.ChangeTool.Text = "Изменить";
-            this.ChangeTool.Click += new System.EventHandler(this.ChangeTool_Click);
+            ChangeTool.Enabled = false;
+            ChangeTool.ImageTransparentColor = Color.Magenta;
+            ChangeTool.Name = "ChangeTool";
+            ChangeTool.Size = new Size(65, 22);
+            ChangeTool.Text = "Изменить";
+            ChangeTool.Click += ChangeTool_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // DeliteTool
             // 
-            this.DeliteTool.Enabled = false;
-            this.DeliteTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeliteTool.Name = "DeliteTool";
-            this.DeliteTool.Size = new System.Drawing.Size(55, 22);
-            this.DeliteTool.Text = "Удалить";
-            this.DeliteTool.Click += new System.EventHandler(this.DeleteTool_Click);
+            DeliteTool.Enabled = false;
+            DeliteTool.ImageTransparentColor = Color.Magenta;
+            DeliteTool.Name = "DeliteTool";
+            DeliteTool.Size = new Size(55, 22);
+            DeliteTool.Text = "Удалить";
+            DeliteTool.Click += DeleteTool_Click;
             // 
             // FlightsDGV
             // 
-            this.FlightsDGV.AllowUserToAddRows = false;
-            this.FlightsDGV.AllowUserToDeleteRows = false;
-            this.FlightsDGV.AllowUserToResizeColumns = false;
-            this.FlightsDGV.AllowUserToResizeRows = false;
-            this.FlightsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FlightsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numFlightColumn,
-            this.typeColumn,
-            this.etaColumn,
-            this.countPasColumn,
-            this.price4PasColumn,
-            this.countCrewColumn,
-            this.price4CrewColumn,
-            this.procDopColumn,
-            this.sumColumn});
-            this.FlightsDGV.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.FlightsDGV.Location = new System.Drawing.Point(0, 57);
-            this.FlightsDGV.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.FlightsDGV.MultiSelect = false;
-            this.FlightsDGV.Name = "FlightsDGV";
-            this.FlightsDGV.ReadOnly = true;
-            this.FlightsDGV.RowHeadersVisible = false;
-            this.FlightsDGV.RowHeadersWidth = 51;
+            FlightsDGV.AllowUserToAddRows = false;
+            FlightsDGV.AllowUserToDeleteRows = false;
+            FlightsDGV.AllowUserToResizeColumns = false;
+            FlightsDGV.AllowUserToResizeRows = false;
+            FlightsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FlightsDGV.Columns.AddRange(new DataGridViewColumn[] { numFlightColumn, typeColumn, etaColumn, countPasColumn, price4PasColumn, countCrewColumn, price4CrewColumn, procDopColumn, sumColumn });
+            FlightsDGV.EditMode = DataGridViewEditMode.EditProgrammatically;
+            FlightsDGV.Location = new Point(0, 57);
+            FlightsDGV.Margin = new Padding(4, 3, 4, 3);
+            FlightsDGV.MultiSelect = false;
+            FlightsDGV.Name = "FlightsDGV";
+            FlightsDGV.ReadOnly = true;
+            FlightsDGV.RowHeadersVisible = false;
+            FlightsDGV.RowHeadersWidth = 51;
             dataGridViewCellStyle9.NullValue = "fgn";
             FlightsDGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
             FlightsDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -271,421 +248,417 @@
             // 
             // numFlightColumn
             // 
-            this.numFlightColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numFlightColumn.DataPropertyName = "id_flight";
+            numFlightColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            numFlightColumn.DataPropertyName = "id_flight";
             dataGridViewCellStyle1.Format = "####";
             dataGridViewCellStyle1.NullValue = null;
-            this.numFlightColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.numFlightColumn.HeaderText = "Номер рейса";
-            this.numFlightColumn.MinimumWidth = 6;
-            this.numFlightColumn.Name = "numFlightColumn";
-            this.numFlightColumn.ReadOnly = true;
+            numFlightColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            numFlightColumn.HeaderText = "Номер рейса";
+            numFlightColumn.MinimumWidth = 6;
+            numFlightColumn.Name = "numFlightColumn";
+            numFlightColumn.ReadOnly = true;
             // 
             // typeColumn
             // 
-            this.typeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeColumn.DataPropertyName = "Type";
-            this.typeColumn.HeaderText = "Тип самолёта";
-            this.typeColumn.MinimumWidth = 6;
-            this.typeColumn.Name = "typeColumn";
-            this.typeColumn.ReadOnly = true;
+            typeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            typeColumn.DataPropertyName = "Type";
+            typeColumn.HeaderText = "Тип самолёта";
+            typeColumn.MinimumWidth = 6;
+            typeColumn.Name = "typeColumn";
+            typeColumn.ReadOnly = true;
             // 
             // etaColumn
             // 
-            this.etaColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.etaColumn.DataPropertyName = "ETA";
+            etaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            etaColumn.DataPropertyName = "ETA";
             dataGridViewCellStyle2.Format = "g";
             dataGridViewCellStyle2.NullValue = null;
-            this.etaColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.etaColumn.HeaderText = "Время прибытия";
-            this.etaColumn.MinimumWidth = 6;
-            this.etaColumn.Name = "etaColumn";
-            this.etaColumn.ReadOnly = true;
+            etaColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            etaColumn.HeaderText = "Время прибытия";
+            etaColumn.MinimumWidth = 6;
+            etaColumn.Name = "etaColumn";
+            etaColumn.ReadOnly = true;
             // 
             // countPasColumn
             // 
-            this.countPasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.countPasColumn.DataPropertyName = "CountPas";
+            countPasColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            countPasColumn.DataPropertyName = "CountPas";
             dataGridViewCellStyle3.Format = "N0";
-            this.countPasColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.countPasColumn.HeaderText = "Кол-во пассажиров";
-            this.countPasColumn.MinimumWidth = 6;
-            this.countPasColumn.Name = "countPasColumn";
-            this.countPasColumn.ReadOnly = true;
+            countPasColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            countPasColumn.HeaderText = "Кол-во пассажиров";
+            countPasColumn.MinimumWidth = 6;
+            countPasColumn.Name = "countPasColumn";
+            countPasColumn.ReadOnly = true;
             // 
             // price4PasColumn
             // 
-            this.price4PasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.price4PasColumn.DataPropertyName = "PricePas";
+            price4PasColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            price4PasColumn.DataPropertyName = "PricePas";
             dataGridViewCellStyle4.Format = "C2";
-            this.price4PasColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.price4PasColumn.HeaderText = "Сбор на пассажира";
-            this.price4PasColumn.MinimumWidth = 6;
-            this.price4PasColumn.Name = "price4PasColumn";
-            this.price4PasColumn.ReadOnly = true;
+            price4PasColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            price4PasColumn.HeaderText = "Сбор на пассажира";
+            price4PasColumn.MinimumWidth = 6;
+            price4PasColumn.Name = "price4PasColumn";
+            price4PasColumn.ReadOnly = true;
             // 
             // countCrewColumn
             // 
-            this.countCrewColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.countCrewColumn.DataPropertyName = "CountCrew";
+            countCrewColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            countCrewColumn.DataPropertyName = "CountCrew";
             dataGridViewCellStyle5.Format = "N0";
-            this.countCrewColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.countCrewColumn.HeaderText = "Кол-во экипажа";
-            this.countCrewColumn.MinimumWidth = 6;
-            this.countCrewColumn.Name = "countCrewColumn";
-            this.countCrewColumn.ReadOnly = true;
+            countCrewColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            countCrewColumn.HeaderText = "Кол-во экипажа";
+            countCrewColumn.MinimumWidth = 6;
+            countCrewColumn.Name = "countCrewColumn";
+            countCrewColumn.ReadOnly = true;
             // 
             // price4CrewColumn
             // 
-            this.price4CrewColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.price4CrewColumn.DataPropertyName = "PriceCrew";
+            price4CrewColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            price4CrewColumn.DataPropertyName = "PriceCrew";
             dataGridViewCellStyle6.Format = "C2";
             dataGridViewCellStyle6.NullValue = null;
-            this.price4CrewColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.price4CrewColumn.HeaderText = "Сбор на экипаж";
-            this.price4CrewColumn.MinimumWidth = 6;
-            this.price4CrewColumn.Name = "price4CrewColumn";
-            this.price4CrewColumn.ReadOnly = true;
+            price4CrewColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            price4CrewColumn.HeaderText = "Сбор на экипаж";
+            price4CrewColumn.MinimumWidth = 6;
+            price4CrewColumn.Name = "price4CrewColumn";
+            price4CrewColumn.ReadOnly = true;
             // 
             // procDopColumn
             // 
-            this.procDopColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.procDopColumn.DataPropertyName = "ProcDop";
+            procDopColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            procDopColumn.DataPropertyName = "ProcDop";
             dataGridViewCellStyle7.Format = "N2";
-            this.procDopColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.procDopColumn.HeaderText = "Процент надбавки";
-            this.procDopColumn.MinimumWidth = 6;
-            this.procDopColumn.Name = "procDopColumn";
-            this.procDopColumn.ReadOnly = true;
+            procDopColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            procDopColumn.HeaderText = "Процент надбавки";
+            procDopColumn.MinimumWidth = 6;
+            procDopColumn.Name = "procDopColumn";
+            procDopColumn.ReadOnly = true;
             // 
             // sumColumn
             // 
-            this.sumColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sumColumn.DataPropertyName = "Sum";
+            sumColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            sumColumn.DataPropertyName = "Sum";
             dataGridViewCellStyle8.Format = "C2";
-            this.sumColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.sumColumn.HeaderText = "Выручка";
-            this.sumColumn.MinimumWidth = 6;
-            this.sumColumn.Name = "sumColumn";
-            this.sumColumn.ReadOnly = true;
+            sumColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            sumColumn.HeaderText = "Выручка";
+            sumColumn.MinimumWidth = 6;
+            sumColumn.Name = "sumColumn";
+            sumColumn.ReadOnly = true;
             // 
             // infoSS
             // 
-            this.infoSS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.infoSS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CountFlightsTSSL,
-            this.CountPasTSSL,
-            this.CountCrewTSSL,
-            this.SumTSSL});
-            this.infoSS.Location = new System.Drawing.Point(0, 594);
-            this.infoSS.Name = "infoSS";
-            this.infoSS.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.infoSS.Size = new System.Drawing.Size(1616, 22);
-            this.infoSS.TabIndex = 3;
-            this.infoSS.Text = "statusStrip1";
+            infoSS.ImageScalingSize = new Size(20, 20);
+            infoSS.Items.AddRange(new ToolStripItem[] { CountFlightsTSSL, CountPasTSSL, CountCrewTSSL, SumTSSL });
+            infoSS.Location = new Point(0, 594);
+            infoSS.Name = "infoSS";
+            infoSS.Padding = new Padding(1, 0, 16, 0);
+            infoSS.Size = new Size(1616, 22);
+            infoSS.TabIndex = 3;
+            infoSS.Text = "statusStrip1";
             // 
             // CountFlightsTSSL
             // 
-            this.CountFlightsTSSL.Name = "CountFlightsTSSL";
-            this.CountFlightsTSSL.Size = new System.Drawing.Size(97, 17);
-            this.CountFlightsTSSL.Text = "Кол-во рейсов 0";
+            CountFlightsTSSL.Name = "CountFlightsTSSL";
+            CountFlightsTSSL.Size = new Size(97, 17);
+            CountFlightsTSSL.Text = "Кол-во рейсов 0";
             // 
             // CountPasTSSL
             // 
-            this.CountPasTSSL.Name = "CountPasTSSL";
-            this.CountPasTSSL.Size = new System.Drawing.Size(117, 17);
-            this.CountPasTSSL.Text = "Всего пассажиров 0";
+            CountPasTSSL.Name = "CountPasTSSL";
+            CountPasTSSL.Size = new Size(117, 17);
+            CountPasTSSL.Text = "Всего пассажиров 0";
             // 
             // CountCrewTSSL
             // 
-            this.CountCrewTSSL.Name = "CountCrewTSSL";
-            this.CountCrewTSSL.Size = new System.Drawing.Size(97, 17);
-            this.CountCrewTSSL.Text = "Всего экипажа 0";
+            CountCrewTSSL.Name = "CountCrewTSSL";
+            CountCrewTSSL.Size = new Size(97, 17);
+            CountCrewTSSL.Text = "Всего экипажа 0";
             // 
             // SumTSSL
             // 
-            this.SumTSSL.Name = "SumTSSL";
-            this.SumTSSL.Size = new System.Drawing.Size(105, 17);
-            this.SumTSSL.Text = "Общая выручка 0";
+            SumTSSL.Name = "SumTSSL";
+            SumTSSL.Size = new Size(105, 17);
+            SumTSSL.Text = "Общая выручка 0";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButtonDownTo);
-            this.groupBox1.Controls.Add(this.radioButtonUpTo);
-            this.groupBox1.Controls.Add(this.comboBoxSort);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(1061, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(534, 109);
-            this.groupBox1.TabIndex = 50;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сортировать по:";
+            groupBox1.Controls.Add(radioButtonDownTo);
+            groupBox1.Controls.Add(radioButtonUpTo);
+            groupBox1.Controls.Add(comboBoxSort);
+            groupBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox1.Location = new Point(1061, 57);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(534, 109);
+            groupBox1.TabIndex = 50;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Сортировать по:";
             // 
             // radioButtonDownTo
             // 
-            this.radioButtonDownTo.AutoSize = true;
-            this.radioButtonDownTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonDownTo.Location = new System.Drawing.Point(422, 51);
-            this.radioButtonDownTo.Name = "radioButtonDownTo";
-            this.radioButtonDownTo.Size = new System.Drawing.Size(105, 24);
-            this.radioButtonDownTo.TabIndex = 56;
-            this.radioButtonDownTo.Text = "Убыванию";
-            this.radioButtonDownTo.UseVisualStyleBackColor = true;
+            radioButtonDownTo.AutoSize = true;
+            radioButtonDownTo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonDownTo.Location = new Point(422, 51);
+            radioButtonDownTo.Name = "radioButtonDownTo";
+            radioButtonDownTo.Size = new Size(105, 24);
+            radioButtonDownTo.TabIndex = 56;
+            radioButtonDownTo.Text = "Убыванию";
+            radioButtonDownTo.UseVisualStyleBackColor = true;
             // 
             // radioButtonUpTo
             // 
-            this.radioButtonUpTo.AutoSize = true;
-            this.radioButtonUpTo.Checked = true;
-            this.radioButtonUpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonUpTo.Location = new System.Drawing.Point(287, 51);
-            this.radioButtonUpTo.Name = "radioButtonUpTo";
-            this.radioButtonUpTo.Size = new System.Drawing.Size(129, 24);
-            this.radioButtonUpTo.TabIndex = 55;
-            this.radioButtonUpTo.TabStop = true;
-            this.radioButtonUpTo.Text = "Возрастанию";
-            this.radioButtonUpTo.UseVisualStyleBackColor = true;
+            radioButtonUpTo.AutoSize = true;
+            radioButtonUpTo.Checked = true;
+            radioButtonUpTo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonUpTo.Location = new Point(287, 51);
+            radioButtonUpTo.Name = "radioButtonUpTo";
+            radioButtonUpTo.Size = new Size(129, 24);
+            radioButtonUpTo.TabIndex = 55;
+            radioButtonUpTo.TabStop = true;
+            radioButtonUpTo.Text = "Возрастанию";
+            radioButtonUpTo.UseVisualStyleBackColor = true;
             // 
             // comboBoxSort
             // 
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Location = new System.Drawing.Point(30, 47);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(245, 28);
-            this.comboBoxSort.TabIndex = 54;
+            comboBoxSort.FormattingEnabled = true;
+            comboBoxSort.Location = new Point(30, 47);
+            comboBoxSort.Name = "comboBoxSort";
+            comboBoxSort.Size = new Size(245, 28);
+            comboBoxSort.TabIndex = 54;
             // 
             // expBtn
             // 
-            this.expBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.expBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.expBtn.Location = new System.Drawing.Point(1203, 511);
-            this.expBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.expBtn.Name = "expBtn";
-            this.expBtn.Size = new System.Drawing.Size(252, 72);
-            this.expBtn.TabIndex = 55;
-            this.expBtn.Text = "Экспорт";
-            this.expBtn.UseVisualStyleBackColor = false;
-            this.expBtn.Click += new System.EventHandler(this.expBtn_Click);
+            expBtn.BackColor = SystemColors.ControlLight;
+            expBtn.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            expBtn.Location = new Point(1203, 511);
+            expBtn.Margin = new Padding(4, 3, 4, 3);
+            expBtn.Name = "expBtn";
+            expBtn.Size = new Size(252, 72);
+            expBtn.TabIndex = 55;
+            expBtn.Text = "Экспорт";
+            expBtn.UseVisualStyleBackColor = false;
+            expBtn.Click += expBtn_Click;
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBoxCrewTo);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBoxCrewFrom);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBoxPassTo);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBoxPassFrom);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBoxTo);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBoxFrom);
-            this.groupBox2.Controls.Add(this.checkBoxCrewCount);
-            this.groupBox2.Controls.Add(this.checkBoxPassCount);
-            this.groupBox2.Controls.Add(this.comboBoxType);
-            this.groupBox2.Controls.Add(this.checkBoxType);
-            this.groupBox2.Controls.Add(this.checkBoxSum);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(1061, 228);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(534, 193);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Фильтры";
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(textBoxCrewTo);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(textBoxCrewFrom);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(textBoxPassTo);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(textBoxPassFrom);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(textBoxTo);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(textBoxFrom);
+            groupBox2.Controls.Add(checkBoxCrewCount);
+            groupBox2.Controls.Add(checkBoxPassCount);
+            groupBox2.Controls.Add(comboBoxType);
+            groupBox2.Controls.Add(checkBoxType);
+            groupBox2.Controls.Add(checkBoxSum);
+            groupBox2.Font = new Font("Segoe UI", 14.5F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox2.Location = new Point(1061, 228);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(534, 193);
+            groupBox2.TabIndex = 56;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Фильтры";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(402, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 28);
-            this.label5.TabIndex = 81;
-            this.label5.Text = "до";
+            label5.AutoSize = true;
+            label5.Location = new Point(402, 149);
+            label5.Name = "label5";
+            label5.Size = new Size(34, 28);
+            label5.TabIndex = 81;
+            label5.Text = "до";
             // 
             // textBoxCrewTo
             // 
-            this.textBoxCrewTo.Enabled = false;
-            this.textBoxCrewTo.Location = new System.Drawing.Point(439, 146);
-            this.textBoxCrewTo.Name = "textBoxCrewTo";
-            this.textBoxCrewTo.Size = new System.Drawing.Size(88, 33);
-            this.textBoxCrewTo.TabIndex = 80;
+            textBoxCrewTo.Enabled = false;
+            textBoxCrewTo.Location = new Point(439, 146);
+            textBoxCrewTo.Name = "textBoxCrewTo";
+            textBoxCrewTo.Size = new Size(88, 33);
+            textBoxCrewTo.TabIndex = 80;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(262, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 28);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "от";
+            label6.AutoSize = true;
+            label6.Location = new Point(262, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(40, 28);
+            label6.TabIndex = 79;
+            label6.Text = "от";
             // 
             // textBoxCrewFrom
             // 
-            this.textBoxCrewFrom.Enabled = false;
-            this.textBoxCrewFrom.Location = new System.Drawing.Point(308, 146);
-            this.textBoxCrewFrom.Name = "textBoxCrewFrom";
-            this.textBoxCrewFrom.Size = new System.Drawing.Size(88, 33);
-            this.textBoxCrewFrom.TabIndex = 78;
+            textBoxCrewFrom.Enabled = false;
+            textBoxCrewFrom.Location = new Point(308, 146);
+            textBoxCrewFrom.Name = "textBoxCrewFrom";
+            textBoxCrewFrom.Size = new Size(88, 33);
+            textBoxCrewFrom.TabIndex = 78;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(402, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 28);
-            this.label3.TabIndex = 77;
-            this.label3.Text = "до";
+            label3.AutoSize = true;
+            label3.Location = new Point(402, 111);
+            label3.Name = "label3";
+            label3.Size = new Size(34, 28);
+            label3.TabIndex = 77;
+            label3.Text = "до";
             // 
             // textBoxPassTo
             // 
-            this.textBoxPassTo.Enabled = false;
-            this.textBoxPassTo.Location = new System.Drawing.Point(439, 108);
-            this.textBoxPassTo.Name = "textBoxPassTo";
-            this.textBoxPassTo.Size = new System.Drawing.Size(88, 33);
-            this.textBoxPassTo.TabIndex = 76;
+            textBoxPassTo.Enabled = false;
+            textBoxPassTo.Location = new Point(439, 108);
+            textBoxPassTo.Name = "textBoxPassTo";
+            textBoxPassTo.Size = new Size(88, 33);
+            textBoxPassTo.TabIndex = 76;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(262, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 28);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "от";
+            label4.AutoSize = true;
+            label4.Location = new Point(262, 111);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 28);
+            label4.TabIndex = 75;
+            label4.Text = "от";
             // 
             // textBoxPassFrom
             // 
-            this.textBoxPassFrom.Enabled = false;
-            this.textBoxPassFrom.Location = new System.Drawing.Point(308, 108);
-            this.textBoxPassFrom.Name = "textBoxPassFrom";
-            this.textBoxPassFrom.Size = new System.Drawing.Size(88, 33);
-            this.textBoxPassFrom.TabIndex = 74;
+            textBoxPassFrom.Enabled = false;
+            textBoxPassFrom.Location = new Point(308, 108);
+            textBoxPassFrom.Name = "textBoxPassFrom";
+            textBoxPassFrom.Size = new Size(88, 33);
+            textBoxPassFrom.TabIndex = 74;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 28);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "до";
+            label2.AutoSize = true;
+            label2.Location = new Point(362, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(34, 28);
+            label2.TabIndex = 73;
+            label2.Text = "до";
             // 
             // textBoxTo
             // 
-            this.textBoxTo.Enabled = false;
-            this.textBoxTo.Location = new System.Drawing.Point(402, 32);
-            this.textBoxTo.Name = "textBoxTo";
-            this.textBoxTo.Size = new System.Drawing.Size(126, 33);
-            this.textBoxTo.TabIndex = 72;
+            textBoxTo.Enabled = false;
+            textBoxTo.Location = new Point(402, 32);
+            textBoxTo.Name = "textBoxTo";
+            textBoxTo.Size = new Size(126, 33);
+            textBoxTo.TabIndex = 72;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(182, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 28);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "от";
+            label1.AutoSize = true;
+            label1.Location = new Point(182, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 28);
+            label1.TabIndex = 71;
+            label1.Text = "от";
             // 
             // textBoxFrom
             // 
-            this.textBoxFrom.Enabled = false;
-            this.textBoxFrom.Location = new System.Drawing.Point(228, 32);
-            this.textBoxFrom.Name = "textBoxFrom";
-            this.textBoxFrom.Size = new System.Drawing.Size(128, 33);
-            this.textBoxFrom.TabIndex = 70;
+            textBoxFrom.Enabled = false;
+            textBoxFrom.Location = new Point(228, 32);
+            textBoxFrom.Name = "textBoxFrom";
+            textBoxFrom.Size = new Size(128, 33);
+            textBoxFrom.TabIndex = 70;
             // 
             // checkBoxCrewCount
             // 
-            this.checkBoxCrewCount.AutoSize = true;
-            this.checkBoxCrewCount.Font = new System.Drawing.Font("Segoe UI", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxCrewCount.Location = new System.Drawing.Point(15, 146);
-            this.checkBoxCrewCount.Name = "checkBoxCrewCount";
-            this.checkBoxCrewCount.Size = new System.Drawing.Size(207, 32);
-            this.checkBoxCrewCount.TabIndex = 68;
-            this.checkBoxCrewCount.Text = "По кол-ву экипажа";
-            this.checkBoxCrewCount.UseVisualStyleBackColor = true;
+            checkBoxCrewCount.AutoSize = true;
+            checkBoxCrewCount.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxCrewCount.Location = new Point(15, 146);
+            checkBoxCrewCount.Name = "checkBoxCrewCount";
+            checkBoxCrewCount.Size = new Size(207, 32);
+            checkBoxCrewCount.TabIndex = 68;
+            checkBoxCrewCount.Text = "По кол-ву экипажа";
+            checkBoxCrewCount.UseVisualStyleBackColor = true;
             // 
             // checkBoxPassCount
             // 
-            this.checkBoxPassCount.AutoSize = true;
-            this.checkBoxPassCount.Font = new System.Drawing.Font("Segoe UI", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPassCount.Location = new System.Drawing.Point(15, 108);
-            this.checkBoxPassCount.Name = "checkBoxPassCount";
-            this.checkBoxPassCount.Size = new System.Drawing.Size(241, 32);
-            this.checkBoxPassCount.TabIndex = 66;
-            this.checkBoxPassCount.Text = "По кол-ву пассажиров";
-            this.checkBoxPassCount.UseVisualStyleBackColor = true;
+            checkBoxPassCount.AutoSize = true;
+            checkBoxPassCount.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxPassCount.Location = new Point(15, 108);
+            checkBoxPassCount.Name = "checkBoxPassCount";
+            checkBoxPassCount.Size = new Size(241, 32);
+            checkBoxPassCount.TabIndex = 66;
+            checkBoxPassCount.Text = "По кол-ву пассажиров";
+            checkBoxPassCount.UseVisualStyleBackColor = true;
             // 
             // comboBoxType
             // 
-            this.comboBoxType.Enabled = false;
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(256, 70);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(272, 33);
-            this.comboBoxType.TabIndex = 65;
+            comboBoxType.Enabled = false;
+            comboBoxType.FormattingEnabled = true;
+            comboBoxType.Location = new Point(256, 70);
+            comboBoxType.Name = "comboBoxType";
+            comboBoxType.Size = new Size(272, 33);
+            comboBoxType.TabIndex = 65;
             // 
             // checkBoxType
             // 
-            this.checkBoxType.AutoSize = true;
-            this.checkBoxType.Font = new System.Drawing.Font("Segoe UI", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxType.Location = new System.Drawing.Point(15, 70);
-            this.checkBoxType.Name = "checkBoxType";
-            this.checkBoxType.Size = new System.Drawing.Size(193, 32);
-            this.checkBoxType.TabIndex = 64;
-            this.checkBoxType.Text = "По типу самолёта";
-            this.checkBoxType.UseVisualStyleBackColor = true;
+            checkBoxType.AutoSize = true;
+            checkBoxType.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxType.Location = new Point(15, 70);
+            checkBoxType.Name = "checkBoxType";
+            checkBoxType.Size = new Size(193, 32);
+            checkBoxType.TabIndex = 64;
+            checkBoxType.Text = "По типу самолёта";
+            checkBoxType.UseVisualStyleBackColor = true;
             // 
             // checkBoxSum
             // 
-            this.checkBoxSum.AutoSize = true;
-            this.checkBoxSum.Font = new System.Drawing.Font("Segoe UI", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxSum.Location = new System.Drawing.Point(15, 32);
-            this.checkBoxSum.Name = "checkBoxSum";
-            this.checkBoxSum.Size = new System.Drawing.Size(140, 32);
-            this.checkBoxSum.TabIndex = 62;
-            this.checkBoxSum.Text = "По выручке";
-            this.checkBoxSum.UseVisualStyleBackColor = true;
+            checkBoxSum.AutoSize = true;
+            checkBoxSum.Font = new Font("Segoe UI", 14.5F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxSum.Location = new Point(15, 32);
+            checkBoxSum.Name = "checkBoxSum";
+            checkBoxSum.Size = new Size(140, 32);
+            checkBoxSum.TabIndex = 62;
+            checkBoxSum.Text = "По выручке";
+            checkBoxSum.UseVisualStyleBackColor = true;
             // 
             // AirportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1616, 616);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.expBtn);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.infoSS);
-            this.Controls.Add(this.FlightsDGV);
-            this.Controls.Add(this.toolsTS);
-            this.Controls.Add(this.mainMenuMS);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.mainMenuMS;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MinimumSize = new System.Drawing.Size(1047, 569);
-            this.Name = "AirportForm";
-            this.Text = "Аэропорт";
-            this.mainMenuMS.ResumeLayout(false);
-            this.mainMenuMS.PerformLayout();
-            this.toolsTS.ResumeLayout(false);
-            this.toolsTS.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlightsDGV)).EndInit();
-            this.infoSS.ResumeLayout(false);
-            this.infoSS.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1616, 616);
+            Controls.Add(groupBox2);
+            Controls.Add(expBtn);
+            Controls.Add(groupBox1);
+            Controls.Add(infoSS);
+            Controls.Add(FlightsDGV);
+            Controls.Add(toolsTS);
+            Controls.Add(mainMenuMS);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = mainMenuMS;
+            Margin = new Padding(4, 3, 4, 3);
+            MinimumSize = new Size(1047, 569);
+            Name = "AirportForm";
+            Text = "Аэропорт";
+            FormClosed += AirportForm_FormClosed;
+            mainMenuMS.ResumeLayout(false);
+            mainMenuMS.PerformLayout();
+            toolsTS.ResumeLayout(false);
+            toolsTS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)FlightsDGV).EndInit();
+            infoSS.ResumeLayout(false);
+            infoSS.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
