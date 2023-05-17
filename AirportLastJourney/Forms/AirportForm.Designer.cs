@@ -406,6 +406,7 @@
             radioButtonDownTo.TabIndex = 56;
             radioButtonDownTo.Text = "Убыванию";
             radioButtonDownTo.UseVisualStyleBackColor = true;
+            radioButtonDownTo.Click += radioButton_Click;
             // 
             // radioButtonUpTo
             // 
@@ -419,6 +420,7 @@
             radioButtonUpTo.TabStop = true;
             radioButtonUpTo.Text = "Возрастанию";
             radioButtonUpTo.UseVisualStyleBackColor = true;
+            radioButtonUpTo.Click += radioButton_Click;
             // 
             // comboBoxSort
             // 
@@ -427,6 +429,7 @@
             comboBoxSort.Name = "comboBoxSort";
             comboBoxSort.Size = new Size(245, 28);
             comboBoxSort.TabIndex = 54;
+            comboBoxSort.SelectedIndexChanged += comboBoxSort_SelectedIndexChanged;
             // 
             // expBtn
             // 
