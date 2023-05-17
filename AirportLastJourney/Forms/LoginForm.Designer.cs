@@ -100,6 +100,7 @@
             this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.AuthorizationButton);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MinimumSize = new System.Drawing.Size(494, 334);
             this.Name = "LoginForm";
             this.Text = "Авторизация";
             this.ResumeLayout(false);

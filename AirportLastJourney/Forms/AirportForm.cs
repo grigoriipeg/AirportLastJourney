@@ -123,7 +123,7 @@ namespace AirportLastJourney
 
                 if (infoForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    var result = MessageBox.Show("Вы уверенны, что хотите добавить рейс?", "Добавление", MessageBoxButtons.YesNo);
+                    var result = MessageBox.Show("Вы уверены, что хотите добавить рейс?", "Добавление", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         db.Flights.Add(infoForm.Flight);
@@ -161,7 +161,7 @@ namespace AirportLastJourney
                 var infoForm = new FlightsForm(flight);
                 if (infoForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    var result = MessageBox.Show("Вы уверенны, что хотите изменить рейс?", "Изменение", MessageBoxButtons.YesNo);
+                    var result = MessageBox.Show("Вы уверены, что хотите изменить рейс?", "Изменение", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         flight.eta = infoForm.Flight.eta;
