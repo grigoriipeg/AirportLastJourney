@@ -271,6 +271,15 @@ namespace AirportLastJourney
             CountPasTSSL.Text = $"Всего пассажиров: {flights.Sum(x => x.countPas)}";
             CountCrewTSSL.Text = $"Всего экипажа: {flights.Sum(x => x.countCrew)}";
             SumTSSL.Text = $"Общая сумма: {flights.Sum(x => x.sum)}";
+
+            if (flights.Count == 0)
+            {
+                labelNullError.Visible = true;
+            }
+            else
+            {
+                labelNullError.Visible = false;
+            }
         }
         private void makeFilter()
         {
@@ -488,7 +497,11 @@ namespace AirportLastJourney
         private void buttonList_Click(object sender, EventArgs e)
         {
             AirportListForm airportListForm = new AirportListForm();
-            airportListForm.ShowDialog();
+            
+            if (airportListForm.ShowDialog() == DialogResult.Cancel)
+            {
+                makeFilter();
+            }
 
         }
     }

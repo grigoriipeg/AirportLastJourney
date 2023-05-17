@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxType = new TextBox();
             label1 = new Label();
             label2 = new Label();
             textBoxId = new TextBox();
@@ -46,14 +45,8 @@
             textBoxPerc = new TextBox();
             label9 = new Label();
             textBoxSum = new TextBox();
+            comboBoxType = new ComboBox();
             SuspendLayout();
-            // 
-            // textBoxType
-            // 
-            textBoxType.Location = new Point(176, 90);
-            textBoxType.Name = "textBoxType";
-            textBoxType.Size = new Size(183, 23);
-            textBoxType.TabIndex = 0;
             // 
             // label1
             // 
@@ -75,6 +68,7 @@
             // 
             // textBoxId
             // 
+            textBoxId.Enabled = false;
             textBoxId.Location = new Point(176, 61);
             textBoxId.Name = "textBoxId";
             textBoxId.Size = new Size(183, 23);
@@ -192,11 +186,20 @@
             textBoxSum.Size = new Size(183, 23);
             textBoxSum.TabIndex = 16;
             // 
+            // comboBoxType
+            // 
+            comboBoxType.FormattingEnabled = true;
+            comboBoxType.Location = new Point(176, 90);
+            comboBoxType.Name = "comboBoxType";
+            comboBoxType.Size = new Size(183, 23);
+            comboBoxType.TabIndex = 18;
+            // 
             // AirportListForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(449, 418);
+            ClientSize = new Size(432, 386);
+            Controls.Add(comboBoxType);
             Controls.Add(label9);
             Controls.Add(textBoxSum);
             Controls.Add(label8);
@@ -214,15 +217,16 @@
             Controls.Add(label2);
             Controls.Add(textBoxId);
             Controls.Add(label1);
-            Controls.Add(textBoxType);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "AirportListForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Список";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TextBox textBoxType;
         private Label label1;
         private Label label2;
         private TextBox textBoxId;
@@ -240,5 +244,6 @@
         private TextBox textBoxPerc;
         private Label label9;
         private TextBox textBoxSum;
+        private ComboBox comboBoxType;
     }
 }
