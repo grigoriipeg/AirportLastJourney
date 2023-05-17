@@ -262,10 +262,12 @@
             this.FlightsDGV.RowHeadersVisible = false;
             this.FlightsDGV.RowHeadersWidth = 51;
             dataGridViewCellStyle9.NullValue = "fgn";
-            this.FlightsDGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.FlightsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.FlightsDGV.Size = new System.Drawing.Size(1027, 526);
-            this.FlightsDGV.TabIndex = 2;
+            FlightsDGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            FlightsDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            FlightsDGV.Size = new Size(1027, 526);
+            FlightsDGV.TabIndex = 2;
+            FlightsDGV.SelectionChanged += FlightsDGV_SelectionChanged;
+            FlightsDGV.Paint += FlightsDGV_Paint;
             // 
             // numFlightColumn
             // 
