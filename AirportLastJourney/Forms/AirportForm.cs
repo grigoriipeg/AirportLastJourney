@@ -1,12 +1,9 @@
 ﻿using AirportLastJourney.Models;
 using System.Globalization;
-using System.Windows.Forms;
-using ApplicationContext = AirportLastJourney.ApplicationContext;
-using Excel = Microsoft.Office.Interop.Excel;
+using _Excel = Microsoft.Office.Interop.Excel;
 
 namespace AirportLastJourney
 {
-    // TODO работа со списком flights и сортировка/фильтрация его, перерисовка на основе этого flights
     public partial class AirportForm : Form
     {
         private readonly List<Flights> flights;
@@ -26,15 +23,12 @@ namespace AirportLastJourney
                 comboBoxType.DataSource = db.Flights.Select(x => x.type).Distinct().ToList();
             }
 
-
             if (!isAdmin)
             {
                 toolsTS.Visible = false;
                 Correction.Visible = false;
                 infoSS.Visible = false;
             }
-
-
 
             comboBoxSort.DataSource = new String[]
             {
@@ -49,7 +43,71 @@ namespace AirportLastJourney
                 "Выручке"
             };
         }
+        private void SortByArg(List<Flights> flightList)
+        {
+            if (radioButtonUpTo.Checked)
+            {
+                UpdateDataGrid(flightList);
+            }
+            else if (radioButtonDownTo.Checked)
+            {
+                flightList.Reverse();
+                UpdateDataGrid(flightList);
+            }
+        }
+        private void UpdateDataGrid(List<Flights> f)
+        {
 
+            flights.Clear();
+            flights.AddRange(f);
+            BinSource.ResetBindings(false);
+        }
+        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxSort.SelectedItem)
+            {
+                case "Номеру рейса":
+                    SortByArg(flights.OrderBy(x => x.id_flight).ToList());
+                    break;
+                case "Типу самолёта":
+                    SortByArg(flights.OrderBy(x => x.type).ToList());
+                    break;
+                case "Времени прибытия":
+                    SortByArg(flights.OrderBy(x => x.eta).ToList());
+                    break;
+                case "По кол-ву пассажиров":
+                    SortByArg(flights.OrderBy(x => x.countPas).ToList());
+                    break;
+                case "Сбору за пассажира":
+                    SortByArg(flights.OrderBy(x => x.pricePas).ToList());
+                    break;
+                case "По кол-ву экипажа":
+                    SortByArg(flights.OrderBy(x => x.countCrew).ToList());
+                    break;
+                case "Сбору за экипаж":
+                    SortByArg(flights.OrderBy(x => x.priceCrew).ToList());
+                    break;
+                case "Проценту надбавки":
+                    SortByArg(flights.OrderBy(x => x.procDop).ToList());
+                    break;
+                case "Выручке":
+                    SortByArg(flights.OrderBy(x => x.sum).ToList());
+                    break;
+                default: break;
+            }
+        }
+        private void textBoxFromTo_TextChanged(object sender, EventArgs e)
+        {
+            makeFilter();
+        }
+        private void textBoxFromTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void checkBox_Click(object sender, EventArgs e)
+        {
+            makeFilter();
+        }
         private void About_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Задание выполнил: Пегушин Григорий ИП-20-3", "Аэропорт",
@@ -91,13 +149,7 @@ namespace AirportLastJourney
                 }
             }
         }
-        private void UpdateDataGrid(List<Flights> f)
-        {
 
-            flights.Clear();
-            flights.AddRange(f);
-            BinSource.ResetBindings(false);
-        }
 
         private void ChangeTool_Click(object sender, EventArgs e)
         {
@@ -141,8 +193,6 @@ namespace AirportLastJourney
                         UpdateDataGrid(db.Flights.ToList());
                     }
                 }
-
-
             }
         }
 
@@ -162,13 +212,13 @@ namespace AirportLastJourney
 
         private void expBtn_Click(object sender, EventArgs e)
         {
-            var ExcelApp = new Excel.Application();
-            Excel.Workbook ExcelWorkBook;
-            Excel.Worksheet ExcelWorkSheet;
+            var ExcelApp = new _Excel.Application();
+            _Excel.Workbook ExcelWorkBook;
+            _Excel.Worksheet ExcelWorkSheet;
             //Книга.^
             ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
             //Таблица.
-            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            ExcelWorkSheet = (_Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
             ExcelWorkSheet.Columns.ColumnWidth = 24;
             ExcelApp.Cells[1, 1] = "Номер рейса";
             ExcelApp.Cells[1, 2] = "Тип самолёта";
@@ -183,7 +233,16 @@ namespace AirportLastJourney
             {
                 for (int j = 0; j < FlightsDGV.ColumnCount; j++)
                 {
-                    ExcelApp.Cells[i + 2, j + 1] = FlightsDGV.Rows[i].Cells[j].Value;
+                    if (this.FlightsDGV.Columns[j].Name == "typeColumn")
+                    {
+                        string stringValue = Enum.GetName(typeof(Types), (int)FlightsDGV.Rows[i].Cells[j].Value);
+                        ExcelApp.Cells[i + 2, j + 1] = stringValue;
+                    }
+                    else
+                    {
+                        ExcelApp.Cells[i + 2, j + 1] = FlightsDGV.Rows[i].Cells[j].Value;
+                    }
+                    
                 }
             }
             ExcelApp.Visible = true;
@@ -196,53 +255,9 @@ namespace AirportLastJourney
             Application.Exit();
         }
 
-        private void comboBoxSort_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (comboBoxSort.SelectedItem)
-            {
-                case "Номеру рейса":
-                    SortByArg(flights.OrderBy(x => x.id_flight).ToList());
-                    break;
-                case "Типу самолёта":
-                    SortByArg(flights.OrderBy(x => x.type).ToList());
-                    break;
-                case "Времени прибытия":
-                    SortByArg(flights.OrderBy(x => x.eta).ToList());
-                    break;
-                case "По кол-ву пассажиров":
-                    SortByArg(flights.OrderBy(x => x.countPas).ToList());
-                    break;
-                case "Сбору за пассажира":
-                    SortByArg(flights.OrderBy(x => x.pricePas).ToList());
-                    break;
-                case "По кол-ву экипажа":
-                    SortByArg(flights.OrderBy(x => x.countCrew).ToList());
-                    break;
-                case "Сбору за экипаж":
-                    SortByArg(flights.OrderBy(x => x.priceCrew).ToList());
-                    break;
-                case "Проценту надбавки":
-                    SortByArg(flights.OrderBy(x => x.procDop).ToList());
-                    break;
-                case "Выручке":
-                    SortByArg(flights.OrderBy(x => x.sum).ToList());
-                    break;
-                default: break;
-            }
-        }
 
-        private void SortByArg(List<Flights> flightList)
-        {
-            if (radioButtonUpTo.Checked)
-            {
-                UpdateDataGrid(flightList);
-            }
-            else if (radioButtonDownTo.Checked)
-            {
-                flightList.Reverse();
-                UpdateDataGrid(flightList);
-            }
-        }
+
+
 
         private void radioButton_Click(object sender, EventArgs e)
         {
@@ -265,7 +280,6 @@ namespace AirportLastJourney
                 // Фильтрация по выручке
                 if (checkBoxSum.Checked)
                 {
-                    //FromToFilter();
                     TextBoxFromToFilter(textBoxFrom, textBoxTo);
 
                     textBoxFrom.Enabled = true;
@@ -293,7 +307,6 @@ namespace AirportLastJourney
                 // Фильтрация по кол-ву пассажиров
                 if (checkBoxPassCount.Checked)
                 {
-                    //PassangerFilter();
                     TextBoxFromToFilter(textBoxPassFrom, textBoxPassTo);
 
                     textBoxPassFrom.Enabled = true;
@@ -321,10 +334,7 @@ namespace AirportLastJourney
 
             }
         }
-        private void checkBox_Click(object sender, EventArgs e)
-        {
-            makeFilter();
-        }
+
 
         // Фильтрация текстовых полей (принимает поля для реюзабельности кода)
         private void TextBoxFromToFilter(TextBox textFrom, TextBox textTo)
@@ -332,6 +342,7 @@ namespace AirportLastJourney
             // Заглушки
             object sender = new object();
             EventArgs e = new EventArgs();
+
             using (var db = new ApplicationContext())
             {
                 if (textFrom.Text.Length != 0 && textTo.Text.Length != 0)
@@ -453,18 +464,25 @@ namespace AirportLastJourney
                 }
             }
         }
-        private void textBoxFromTo_TextChanged(object sender, EventArgs e)
-        {
-            makeFilter();
-        }
-        private void textBoxFromTo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
             makeFilter();
+        }
+
+        private void FlightsDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.FlightsDGV.Columns[e.ColumnIndex].Name == "Тип самолёта")
+            {
+                if (e.Value != null)
+                {
+                    // Check for the string "pink" in the cell.
+                    string stringValue = Enum.GetName(typeof(Types), (int)e.Value);
+
+                    e.Value = stringValue;
+                    
+                }
+            }
         }
     }
 }

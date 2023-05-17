@@ -246,6 +246,7 @@
             FlightsDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FlightsDGV.Size = new Size(1027, 526);
             FlightsDGV.TabIndex = 2;
+            FlightsDGV.CellFormatting += FlightsDGV_CellFormatting;
             FlightsDGV.SelectionChanged += FlightsDGV_SelectionChanged;
             FlightsDGV.Paint += FlightsDGV_Paint;
             // 
