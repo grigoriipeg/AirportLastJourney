@@ -1,4 +1,5 @@
-﻿using AirportLastJourney.Models;
+﻿using AirportLastJourney.Forms;
+using AirportLastJourney.Models;
 using System.Globalization;
 using _Excel = Microsoft.Office.Interop.Excel;
 
@@ -482,6 +483,13 @@ namespace AirportLastJourney
 
                 }
             }
+        }
+
+        private void buttonList_Click(object sender, EventArgs e)
+        {
+            AirportListForm airportListForm = new AirportListForm();
+            airportListForm.ShowDialog();
+
         }
     }
 }
