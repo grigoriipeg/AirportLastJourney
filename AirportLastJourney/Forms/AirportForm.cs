@@ -111,7 +111,10 @@ namespace AirportLastJourney
         }
         private void About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Задание выполнил: Пегушин Григорий ИП-20-3", "Аэропорт",
+            MessageBox.Show("Данная программое обеспечение может помочь в управлении различными аспектами работы аэропорта, такими как обслуживание пассажиров и грузов, координация прилетов и вылетов самолетов.\n\n" +
+                "Разработчик: Пегушин Григорий, ИП-20-3\n" +
+                "По всем вопросам: grisha.pegushin@yandex.ru\n\n" +
+                "© 2023, Аэропорт. Все права защищены ", "Аэропорт",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

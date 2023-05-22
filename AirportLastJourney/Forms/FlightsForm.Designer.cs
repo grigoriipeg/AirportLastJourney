@@ -64,9 +64,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(643, 135);
+            this.panel1.Size = new System.Drawing.Size(564, 101);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -77,7 +77,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(643, 135);
+            this.label1.Size = new System.Drawing.Size(564, 101);
             this.label1.TabIndex = 1;
             this.label1.Text = "Информация о рейсе";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,10 +86,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 194);
+            this.label2.Location = new System.Drawing.Point(10, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 36);
+            this.label2.Size = new System.Drawing.Size(154, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Тип самолёта";
             // 
@@ -99,10 +99,10 @@
             this.comboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboType.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboType.FormattingEnabled = true;
-            this.comboType.Location = new System.Drawing.Point(325, 211);
-            this.comboType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboType.Location = new System.Drawing.Point(284, 158);
+            this.comboType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboType.Name = "comboType";
-            this.comboType.Size = new System.Drawing.Size(303, 24);
+            this.comboType.Size = new System.Drawing.Size(266, 21);
             this.comboType.TabIndex = 2;
             this.comboType.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboType_DrawItem);
             this.comboType.SelectedIndexChanged += new System.EventHandler(this.comboType_SelectedIndexChanged);
@@ -111,10 +111,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 238);
+            this.label3.Location = new System.Drawing.Point(10, 178);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 36);
+            this.label3.Size = new System.Drawing.Size(192, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Время прибытия";
             // 
@@ -123,10 +123,10 @@
             this.dateTimeETA.CustomFormat = "dd.MM.yyyy hh:mm:ss";
             this.dateTimeETA.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimeETA.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeETA.Location = new System.Drawing.Point(325, 252);
-            this.dateTimeETA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimeETA.Location = new System.Drawing.Point(284, 189);
+            this.dateTimeETA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimeETA.Name = "dateTimeETA";
-            this.dateTimeETA.Size = new System.Drawing.Size(303, 23);
+            this.dateTimeETA.Size = new System.Drawing.Size(266, 20);
             this.dateTimeETA.TabIndex = 4;
             this.dateTimeETA.Value = new System.DateTime(2022, 11, 15, 0, 0, 0, 0);
             this.dateTimeETA.ValueChanged += new System.EventHandler(this.dateTimeETA_ValueChanged);
@@ -135,20 +135,20 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(12, 282);
+            this.label4.Location = new System.Drawing.Point(10, 212);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(274, 36);
+            this.label4.Size = new System.Drawing.Size(218, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Кол-во пассажиров";
             // 
             // numericCountPas
             // 
             this.numericCountPas.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericCountPas.Location = new System.Drawing.Point(325, 295);
-            this.numericCountPas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericCountPas.Location = new System.Drawing.Point(284, 221);
+            this.numericCountPas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericCountPas.Maximum = new decimal(new int[] {
-            30,
+            250,
             0,
             0,
             0});
@@ -158,7 +158,7 @@
             0,
             0});
             this.numericCountPas.Name = "numericCountPas";
-            this.numericCountPas.Size = new System.Drawing.Size(304, 23);
+            this.numericCountPas.Size = new System.Drawing.Size(266, 20);
             this.numericCountPas.TabIndex = 6;
             this.numericCountPas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericCountPas.Value = new decimal(new int[] {
@@ -172,10 +172,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(12, 326);
+            this.label5.Location = new System.Drawing.Point(10, 244);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(273, 36);
+            this.label5.Size = new System.Drawing.Size(216, 29);
             this.label5.TabIndex = 7;
             this.label5.Text = "Сбор на пассажира";
             // 
@@ -183,10 +183,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(12, 460);
+            this.label6.Location = new System.Drawing.Point(10, 345);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 36);
+            this.label6.Size = new System.Drawing.Size(138, 29);
             this.label6.TabIndex = 9;
             this.label6.Text = "% надбавки";
             // 
@@ -194,15 +194,15 @@
             // 
             this.numericProcDop.DecimalPlaces = 2;
             this.numericProcDop.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericProcDop.Location = new System.Drawing.Point(325, 469);
-            this.numericProcDop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericProcDop.Location = new System.Drawing.Point(284, 352);
+            this.numericProcDop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericProcDop.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
             this.numericProcDop.Name = "numericProcDop";
-            this.numericProcDop.Size = new System.Drawing.Size(304, 23);
+            this.numericProcDop.Size = new System.Drawing.Size(266, 20);
             this.numericProcDop.TabIndex = 10;
             this.numericProcDop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericProcDop.ValueChanged += new System.EventHandler(this.numericProcDop_ValueChanged);
@@ -211,10 +211,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(12, 152);
+            this.label8.Location = new System.Drawing.Point(10, 114);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 36);
+            this.label8.Size = new System.Drawing.Size(149, 29);
             this.label8.TabIndex = 17;
             this.label8.Text = "Номер рейса";
             // 
@@ -227,8 +227,8 @@
             0,
             0,
             0});
-            this.numericPricePas.Location = new System.Drawing.Point(325, 340);
-            this.numericPricePas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericPricePas.Location = new System.Drawing.Point(284, 255);
+            this.numericPricePas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericPricePas.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -240,7 +240,7 @@
             0,
             0});
             this.numericPricePas.Name = "numericPricePas";
-            this.numericPricePas.Size = new System.Drawing.Size(304, 23);
+            this.numericPricePas.Size = new System.Drawing.Size(266, 20);
             this.numericPricePas.TabIndex = 19;
             this.numericPricePas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericPricePas.Value = new decimal(new int[] {
@@ -259,8 +259,8 @@
             0,
             0,
             0});
-            this.numericPriceCrew.Location = new System.Drawing.Point(325, 429);
-            this.numericPriceCrew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericPriceCrew.Location = new System.Drawing.Point(284, 322);
+            this.numericPriceCrew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericPriceCrew.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -272,7 +272,7 @@
             0,
             0});
             this.numericPriceCrew.Name = "numericPriceCrew";
-            this.numericPriceCrew.Size = new System.Drawing.Size(304, 23);
+            this.numericPriceCrew.Size = new System.Drawing.Size(266, 20);
             this.numericPriceCrew.TabIndex = 23;
             this.numericPriceCrew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericPriceCrew.Value = new decimal(new int[] {
@@ -286,18 +286,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 415);
+            this.label7.Location = new System.Drawing.Point(10, 311);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(231, 36);
+            this.label7.Size = new System.Drawing.Size(182, 29);
             this.label7.TabIndex = 22;
             this.label7.Text = "Сбор на экипаж";
             // 
             // numericCountCrew
             // 
             this.numericCountCrew.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericCountCrew.Location = new System.Drawing.Point(325, 385);
-            this.numericCountCrew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericCountCrew.Location = new System.Drawing.Point(284, 289);
+            this.numericCountCrew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericCountCrew.Maximum = new decimal(new int[] {
             30,
             0,
@@ -309,7 +309,7 @@
             0,
             0});
             this.numericCountCrew.Name = "numericCountCrew";
-            this.numericCountCrew.Size = new System.Drawing.Size(304, 23);
+            this.numericCountCrew.Size = new System.Drawing.Size(266, 20);
             this.numericCountCrew.TabIndex = 21;
             this.numericCountCrew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericCountCrew.Value = new decimal(new int[] {
@@ -323,10 +323,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(12, 371);
+            this.label9.Location = new System.Drawing.Point(10, 278);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(229, 36);
+            this.label9.Size = new System.Drawing.Size(181, 29);
             this.label9.TabIndex = 20;
             this.label9.Text = "Кол-во экипажа";
             // 
@@ -334,10 +334,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(12, 505);
+            this.label10.Location = new System.Drawing.Point(10, 379);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 36);
+            this.label10.Size = new System.Drawing.Size(108, 29);
             this.label10.TabIndex = 24;
             this.label10.Text = "Выручка";
             // 
@@ -345,11 +345,11 @@
             // 
             this.textSum.BackColor = System.Drawing.SystemColors.Menu;
             this.textSum.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textSum.Location = new System.Drawing.Point(325, 509);
-            this.textSum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textSum.Location = new System.Drawing.Point(284, 382);
+            this.textSum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textSum.Name = "textSum";
             this.textSum.ReadOnly = true;
-            this.textSum.Size = new System.Drawing.Size(303, 23);
+            this.textSum.Size = new System.Drawing.Size(266, 20);
             this.textSum.TabIndex = 25;
             this.textSum.Text = "7200";
             this.textSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -360,10 +360,10 @@
             this.butSave.BackColor = System.Drawing.SystemColors.Info;
             this.butSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.butSave.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butSave.Location = new System.Drawing.Point(8, 612);
-            this.butSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butSave.Location = new System.Drawing.Point(7, 459);
+            this.butSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(176, 78);
+            this.butSave.Size = new System.Drawing.Size(154, 58);
             this.butSave.TabIndex = 0;
             this.butSave.Text = "Сохранить";
             this.butSave.UseVisualStyleBackColor = false;
@@ -373,10 +373,10 @@
             this.butCancel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.butCancel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.butCancel.Location = new System.Drawing.Point(453, 612);
-            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butCancel.Location = new System.Drawing.Point(396, 459);
+            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(176, 78);
+            this.butCancel.Size = new System.Drawing.Size(154, 58);
             this.butCancel.TabIndex = 1;
             this.butCancel.Text = "Отмена";
             this.butCancel.UseVisualStyleBackColor = false;
@@ -384,18 +384,19 @@
             // numericFlight
             // 
             this.numericFlight.Enabled = false;
-            this.numericFlight.Location = new System.Drawing.Point(325, 161);
+            this.numericFlight.Location = new System.Drawing.Point(284, 121);
+            this.numericFlight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericFlight.Name = "numericFlight";
-            this.numericFlight.Size = new System.Drawing.Size(304, 27);
+            this.numericFlight.Size = new System.Drawing.Size(266, 23);
             this.numericFlight.TabIndex = 2;
             this.numericFlight.Text = "1";
             this.numericFlight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FlightsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 697);
+            this.ClientSize = new System.Drawing.Size(564, 529);
             this.Controls.Add(this.numericFlight);
             this.Controls.Add(this.butCancel);
             this.Controls.Add(this.textSum);
@@ -417,9 +418,9 @@
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(661, 744);
-            this.MinimumSize = new System.Drawing.Size(661, 744);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(580, 568);
+            this.MinimumSize = new System.Drawing.Size(580, 568);
             this.Name = "FlightsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавления рейса";
